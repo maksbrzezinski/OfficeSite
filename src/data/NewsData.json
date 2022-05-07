@@ -1,0 +1,23 @@
+[
+    {
+        "img": "../images/News1.jpeg",
+        "alt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "date": "01.01.2021",
+        "link": "/"
+    },
+    {
+        "img": "../images/News2.jpeg",
+        "alt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "date": "01.01.2021",
+        "link": "/"
+    },
+    {
+        "img": "../images/News3.jpeg",
+        "alt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "date": "01.01.2021",
+        "link": "/"
+    }
+]

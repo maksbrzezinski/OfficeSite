@@ -1,0 +1,22 @@
+[
+    {
+        "img": "../images/Work1.jpeg",
+        "alt": "First image of a office",
+        "name": "First image of an office"
+    },
+    {
+        "img": "../images/Work2.jpeg",
+        "alt": "Second image of a office",
+        "name": "Second image of an office"
+    },
+    {
+        "img": "../images/Work3.jpeg",
+        "alt": "Third image of a office",
+        "name": "Third image of an office"
+    },
+    {
+        "img": "../images/Work4.jpeg",
+        "alt": "Fourth image of a office",
+        "name": "Fourth image of an office"
+    }
+]
