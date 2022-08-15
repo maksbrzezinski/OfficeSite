@@ -5,7 +5,7 @@ module.exports = {
     author: `@maksbrzezinski`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
-  
+  pathPrefix: "/ADream",
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
