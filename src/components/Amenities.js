@@ -10,170 +10,213 @@ import { Button } from "./Button"
 const Amenitites = () => {
   return (
     <AmenitiesContainer>
-        <AmenitiesItems>
-            <Item1>
-                <h4>Lorem ipsum dolor sit amet, conse</h4>
-                <hr css={`height: 10px;`} />
-            </Item1>
-            <Square>
-                <AiOutlineWallet css={`font-size: 6rem;`}
-                />
-                <SmallSquare css={`
-                top: 0.6%;
-                left: 29.1%;
-                `}/>
+        <Row className="row">
+            <TitleSection className="square">
+                <h1>Lorem ipsum dolor sit amet, conse</h1>
+                <div className="underline"/>
+            </TitleSection>
+            <div className="square">
+                <AiOutlineWallet class="icon"/>
+                <SmallSquare className="s1"/>
                 <p>Lorem ipsum</p>
-            </Square>
-            <Square>
-                <BiCoffee css={`font-size: 6rem;`}/>
-                <SmallSquare css={`
-                top: -0.5%;
-                left: 55.7%;
-                `}/>
+            </div>
+            <div className="square">
+                <BiCoffee class="icon"/>
+                <SmallSquare className="s2"/>
                 <p>Lorem ipsum<br /> dolor sit amet conse</p>
-            </Square>
-            <Square>
-                <GiBookshelf css={`font-size: 6rem;`}/>
-                <SmallSquare css={`
-                top: 5.5%;
-                left: 82%;
-                `}/>
+            </div>
+            <div className="square">
+                <GiBookshelf class="icon"/>
+                <SmallSquare className="s3"/>
                 <p>Lorem ipsum<br /> dolor sit amet,</p>
-            </Square>
-            <Square2>
-                <GrPersonalComputer css={`font-size: 6rem;`}/>
-                <SmallSquare css={`
-                top: 20%;
-                `}/>
+            </div>
+            <div className="square">
+                <GrPersonalComputer className="icon"/>
+                <SmallSquare className="s4"/>
                 <p>Lorem ipsum<br /> dolor sit amet,</p>
-            </Square2>
-            <Square2>
-                <GiDesk css={`font-size: 6rem;`}/>
-                <SmallSquare css={`
-                top: 4.9%;
-                left: 28.1%;
-                `}/>
-                <p>Lorem ipsum dolor sit amet, conse lorem ipsum lorem</p>
-            </Square2>
-            <Square2>
-                <AiOutlineWifi css={`font-size: 6rem;`}/>
-                <SmallSquare css={`
-                top: 0.5%;
-                height: 41px;
-                `}/>
-                <p>Lorem ipsum dolor sit amet, conse lorem ipsum lorem</p>
-            </Square2>
-            <Square2>
-                <RiTeamFill css={`font-size: 6rem;`}/>
-                <SmallSquare css={`
-                top: 17.5%;
-                `}/>
-                <p>Lorem ipsum dolor sit amet, conse lorem ipsum</p>
-            </Square2>
+            </div>
+            <div className="square">
+                <GiDesk class="icon"/>
+                <SmallSquare className="s5"/>
+                <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum lorem</p>
+            </div>
+            <div className="square">
+                <AiOutlineWifi class="icon"/>
+                <SmallSquare className="s6"/>
+                <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum lorem</p>
+            </div>
+            <div className="square">
+                <RiTeamFill class="icon"/>
+                <SmallSquare className="s7"/>
+                <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum</p>
+            </div>
+        </Row>
+
         <AmenititesButton>
-            <Button primary="True" to="/Oferta" css={`
-                padding: 20.5px 22px; 
-                font-size: 13px; 
-                font-family: Poppins-bold;
-                padding-right: 12px`}>
-                    DOWIEDZ SIĘ WIĘCEJ
-            <AiOutlineArrowRight css={`
-                background-color: black;
-                font-size: 1.6rem;
-                color: white;
-                text-align: right;
-                margin-left: 36px;
-                z-index: 2;`}/>
+            <Button primary="True" to="/Oferta" id="Button">
+                DOWIEDZ SIĘ WIĘCEJ <AiOutlineArrowRight class="icon"/>
             </Button>
         </AmenititesButton>
-        </AmenitiesItems>
     </AmenitiesContainer>
-  )
+    )
 }
 
 export default Amenitites
 
 const AmenitiesContainer = styled.div`
-    padding: 5rem calc((100vw - 1300px) /2);
-    margin-top: 6.8rem;
+    position: relative;
+    /* padding: 6rem calc((100vw - 1300px) /2); */
+    padding: 6.7% 3.2%;
+    margin: 160px 0 0 14px;
     height: 100vh;
-    position: relative;
+    width: 100vw;
     color: #000;
-    text-align: left;
-    justify-content: center;
-`
 
-const AmenitiesItems = styled.div`
-    display: grid;
-    gap: 0px 41px;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
-    position: relative;
-    margin-left: 4.7%;
-    margin-top: 5.1%;
-    font-size: 21px;
-    justify-content: center;
-    align-items: stretch;
-    
-    @media screen and (max-width: 1300px) {
+    .s1 {
+        top: 1.4%;
+        left: 21%; 
+    }
+
+    .s2 {
+        top: -2.2%;
+        left: 25%;
+    }
+
+    .s3 {
+        top: 16.6%;
+        left: 28%;
+    }
+
+    .s4 {
+        top: 24.5%;
+    }
+
+    .s5 {
+        top: 5.5%;
+        left: 29.5%;
+    }
+
+    .s6 {
+        top: 0.4%;
+        height: 41px;
+    }
+
+    .s7 {
+        top: 22%;
+    }
+
+    .s1, .s2, .s3, .s4, .s5, .s6, .s7 {
+        @media (max-width: 768px) {
+            display: absolute;
+            top: 1%;
+            left: 42%;
+            transform: translate(-42%, -1%);
+        }
+    } 
+
+    @media (min-width: 891px) and (max-width: 1225px) {
+        height: auto;
+        padding: 3rem 0 0;
+    }
+    @media (max-width: 890px) {
         height: auto;
     }
 
-    @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        height: auto;
-        justify-items: center;
-    }
-`
-const Item1 = styled.div` 
-    width: 12vw;
-    position: relative;
-    top: -86px;
-
-    h4 {
-        font-family: Poppins-bold;
-        font-size: 36px;
-        line-height: 43.5px;
-    }
-
-    hr {
-        height: 8px;
-        border: 0px;
-        background-color: #000;
-        opacity: 1;
-        width: 6.75vw;
-        margin-top: 2.2rem;
-     }
-`
-const Square = styled.div`
-    width: 15vw;
-
-    p {
-        margin-top: 1.4rem;
-        line-height: 29px;
-    }
-`
-
-const Square2 = styled.div`
-    width: 15vw;
-    position: relative;
-    top: -16px;
-
-    p {
-        margin-top: 1.4rem;
-        line-height: 29px;
+    @media (max-width: 768px) {
+        text-align: center;
     }
 `
 
 const SmallSquare = styled.div`
+    position: absolute;
+    background-color: #ffc439;
     height: 42px;
     width: 41px;
-    background-color: #ffc439;
-    position: absolute;
     z-index: -1;
 `
 
+const Row = styled.div`
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        font-size: 21px;  
+        justify-content: center;
+    
+        h1 {
+            font-family: "Poppins-bold", sans-serif;
+            font-size: 36px;
+            line-height: 43.5px;
+        }
+
+        .underline {
+            height: 8px;
+            width: 6.75vw;
+            margin-top: 2.2rem;
+            background-color: #000;
+        }
+
+        p {
+            margin-top: 1.4rem;
+            line-height: 28.5px;
+        }
+
+        .icon {
+            font-size: 96px;
+        } 
+
+        .square {
+            position: relative;
+            width: 17vw;
+            margin: 0 4.9vh;
+
+        @media (max-width: 768px) {
+            width: 70%;
+            margin-top: 30px;
+            align-items: center;
+            justify-content: center;
+
+            .underline {
+                margin: 2.2rem auto 0;
+                width: 15vw;
+            }
+            }
+        }
+`
+
+const TitleSection = styled.div` 
+    top: -86px;
+    width: 12vw;
+`
+
 const AmenititesButton = styled.div`
-     position: absolute;
-     top: 67.9%;
+    position: relative;
+    margin: 11.4vh 0 0 9.2vh;
+
+        #Button:hover > .icon {
+            background-color: #077BF1;
+        }
+
+        #Button {
+            font-family: "Poppins-bold", sans-serif;
+            font-size: 13px; 
+            padding: 20.5px 16px 20.5px 23px; 
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .icon {
+            margin-left: 25px;
+            font-size: 26px;
+            text-align: right;
+            color: #fff;
+            background-color: #000;
+            z-index: 2;
+            transition: background-color 0.3s;
+        }
+
+    @media (max-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 `

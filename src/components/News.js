@@ -50,25 +50,22 @@ function getNews(data) {
 }
 
   return (
-      <div>
           <NewsContainer>
               <h1>Aktualności</h1>
-              <div>{heading}</div>
               <NewsCard>{getNews(data)}</NewsCard>
           </NewsContainer>
-      </div>
   )
 }
 
 export default Amenities;
 
 const NewsBox = styled.div`
+  position: relative;
 `
 
 const PhotoImg = styled(Img)`
     height: 73%;
     width: 23.4vw;
-    position: relative;
 `
 
 const NewsInfo = styled.div`
@@ -76,50 +73,47 @@ const NewsInfo = styled.div`
     flex-direction: column;
     height: 45vh;
     width: 100%;
-    padding: 2.9% 2rem 0 0;
+    padding: 2% 0;
 `
 
 const Date = styled.div`
     font-size: 13.5px;
-    padding-top: 1rem;
+    padding-top: 3.6%;
 `
 
 const Title = styled.div`
+    font-family: 'Poppins-bold', sans-serif;
     font-size: 21px;
-    line-height: 28px;
-    font-family: Poppins-bold;
-    padding-top: 3.5%;
+    line-height: 29px;
+    padding-top: 2.4%;
 `
 
 const NewsLink = styled.div`
-    display: flex;
-    position: relative;
     font-size: 13.5px;
-    padding-top: 1.45rem;
+    padding-top: 5.1%;
 
     a {
-      color: black;
+      color: #000;
     }
 `
 
 const NewsContainer = styled.div`
+    position: relative;
     height: 83vh;
-    background-color: white;
-    margin: 62px auto;
-    padding: 0 9.1%;
-    justify-content: center;
+    margin: 4.3vw auto;
 
     h1 {
       text-align: center;
       padding: 48px 0 0 1px;
       font-size: 49px;
-      font-family: Poppins-bold;
+      font-family: 'Poppins-bold', sans-serif;
     }
-`
+  `
 
 const NewsCard = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7%;
-  margin-top: 7.1%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 5.8vw 3.4vw;
+  padding-left: 5.7vw;
 `

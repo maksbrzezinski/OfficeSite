@@ -6,183 +6,225 @@ import { Link } from 'gatsby'
 
 const Offer = () => {
     
-        return (
-            <ServicesWrapper>
-                <ImageContainer>
-                    <StaticImage src="../images/Work1.jpeg" />
-                    <Link to="/" >
-                        <ItemBtn>
-                            <button />
-                        </ItemBtn>
-                    </Link>
-                    <ItemName css={`height: 119px; width: 167px`}>
-                        <ItemSquare />
-                        <h4>Biuro</h4>
-                        <hr css={`height: 4px; top: -17px`} />
-                        <p css={`top: -27px`}>od 1000 zł/msc</p>
-                    </ItemName>
-                </ImageContainer>
-                <ImageContainer>
-                    <StaticImage src="../images/Work2.jpeg" />
-                    <Link to="/" >
-                        <ItemBtn>
-                            <button />
-                        </ItemBtn>
-                    </Link>
-                    <ItemName css={`height: 146px; width: 181px`}>
-                        <ItemSquare />
-                        <h4>Lorem<br /> ipsum</h4>
-                        <hr css={`height: 4px;`} />
-                        <p>od 500 zł/msc</p>
-                    </ItemName>
-                </ImageContainer>
-                <BottomContainer>
-                    <StaticImage src="../images/Work3.jpeg" />
-                    <Link to="/" >
-                        <ItemBtn css={`top: 63.7%;
-                        @media screen and (max-width: 1300px) {
-                        top: 73.6%;
-                        }
-                        `}>
-                            <button />
-                        </ItemBtn>
-                    </Link>
-                    <ItemName css={`top: 30.5%; height: 147px; width: 167px;
-                    @media screen and (max-width: 1300px) {
-                        top: 0;
-                    }`}>
-                        <ItemSquare />
-                        <h4>Biuro<br /> lorem</h4>
-                        <hr css={`height: 4px;`} />
-                        <p>od 100 zł/h</p>
-                    </ItemName>
-                </BottomContainer>
-                <BottomContainer>
-                    <StaticImage src="../images/Work4.jpeg" />
-                    <Link to="/" >
-                        <ItemBtn css={`top: 63.7%;
-                        @media screen and (max-width: 1300px) {
-                        top: 73.6%;
-                        }`}>
-                            <button />
-                        </ItemBtn>
-                    </Link>
-                    <ItemName css={`top: 30.5%; height: 147px; width: 243px;
-                    @media screen and (max-width: 1300px) {
-                        top: 0;
-                    }
-                    `}>
-                        <ItemSquare css={`left: -3.5%`}/>
-                        <h4>Biuro lorem ipsum Lorem</h4>
-                        <hr css={`height: 4px;`} />
-                        <p>od 100 zł/h</p>
-                    </ItemName>
-                </BottomContainer>
-            </ServicesWrapper>
-        )
-    }
+    return (
+        <ServicesWrapper>
+            <TopContainer className="Container">
+                <StaticImage src="../images/Work1.jpeg" />
+
+                <Link to="/" >
+                    <Arrow className="arrowTop" />
+                </Link>
+
+                <div className="one">
+                    <ItemSquare />
+                    <h4>Biuro</h4>
+                    <Underline className="oneCustomDiv" />
+                    <p className="oneCustomP">od 1000 zł/msc</p>
+                </div>
+            </TopContainer>
+
+            <TopContainer className="Container">
+                <StaticImage src="../images/Work2.jpeg" />
+
+                <Link to="/" >
+                    <Arrow className="arrowTop" />
+                </Link>
+
+                <div className="two">
+                    <ItemSquare />
+                    <h4>Lorem<br /> ipsum</h4>
+                    <Underline />
+                    <p>od 500 zł/msc</p>
+                </div>
+            </TopContainer>
+
+
+            <BottomContainer className="Container">
+                <StaticImage src="../images/Work3.jpeg" />
+
+                <Link to="/" >
+                    <Arrow className="arrowBottom" />
+                </Link>
+
+                <div className="three">
+                    <ItemSquare />
+                    <h4>Biuro<br /> lorem</h4>
+                    <Underline />
+                    <p>od 100 zł/h</p>
+                </div>
+            </BottomContainer>
+
+            <BottomContainer className="Container">
+                <StaticImage src="../images/Work4.jpeg" />
+
+                <Link to="/" >
+                    <Arrow className="arrowBottom" />
+                </Link>
+
+                <div className="four">
+                    <ItemSquare className="squareFour"/>
+                    <h4>Biuro lorem ipsum Lorem</h4>
+                    <Underline />
+                    <p className="fourCustomP">od 100 zł/h</p>
+                </div>
+            </BottomContainer>
+        </ServicesWrapper>
+    )
+}
 
 export default Offer;
 
 const ServicesWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.8% 1.9%;
-    position: relative;
-    justify-items: center;
-    margin: 6.6% auto;
-    height: 80vh;
-    width: 81.8vw;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 1.2% 1.9%;
+position: relative;
+justify-items: center;
+margin: 6.5% auto;
+height: 80vh;
+width: 81.8vw;
 
-    @media screen and (max-width: 1300px) {
+.Container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+h4 {
+    position: absolute;
+    font-family: "Poppins-bold", sans-serif;
+    font-size: 21px;
+    margin: 1.35rem;
+    line-height: 1.36;
+    top: 3.4px;
+    left: 5px;
+    width: 90%;
+}
+
+p {
+    font-size: 13.5px;
+    position: relative;
+    margin-top: 3.8%;
+    margin-left: 1%;
+}
+
+.one, .two, .three, .four {
+    position: absolute;
+    background-color: #fff;
+    padding-left: 25px;
+    margin: 1.35rem;
+}
+
+.one {
+    height: 119px; 
+    width: 167px;
+
+    .oneCustomDiv, .oneCustomP {
+        top: -26px;
+    }
+}
+
+.two {
+    height: 146px; 
+    width: 181px;
+}
+
+.three, .four {
+    top: 30.3%; 
+    height: 146px; 
+}
+
+.three {
+    width: 167px;
+}
+
+.four {
+    width: 243px;
+
+    .fourCustomP {
+        top: -4px;
+    }
+}
+
+.arrowTop {
+}
+
+.arrowBottom {
+    top: 64.2%;
+}
+
+.squareFour {
+    margin-left: 1.9%;
+}
+
+a { 
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: royalblue;
+}
+
+    @media (max-width: 1300px) {
         grid-template-columns: 1fr;
         height: auto;
+
+        .Container {
+            height: 48.5vh;
+            margin-top: 2%;
+        }
+
+        .arrowBottom {
+            top: 73.6%;
+        }
+
+        .three, .four {
+            top: 0;
+        }
     }
 ` 
 
-const ImageContainer = styled.div`
+const Underline = styled.div`
     position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 48.5vh;
-    width: 100%;
-    margin-top: 2%;
+    background-color: #000;
+    height: 4px;
+    width: 37px;
+    margin-top: 6.3vh;
+    margin-left: 1%;
+`
 
-    a{ 
-        color: black;
-    }
+const TopContainer = styled.div`
+height: 93.4%;
+margin-top: 2%;
 `
 
 const BottomContainer = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 68.9%; 
-    width: 100%;
-    margin-top: 1.5%;
-
-    @media screen and (max-width: 1300px) {
-        height: 48.5vh;
-        margin-top: 2%;
-    }
+height: 70.5%;
 `
 
-const ItemBtn = styled(AiOutlineArrowRight)`
-    display: flex;
-    background-color: #fff;
-    border-radius: 0px;
-    height: 6.15rem;
-    width: 6.15rem;
-    position: absolute;
-    padding: 30px;
-    left: 83%;
-    top: 73.6%;
+const Arrow = styled(AiOutlineArrowRight)`
+position: absolute;
+display: flex;
+background-color: #fff;
+border-radius: 0px;
+height: 98px;
+width: 98px;
+padding: 30px;
+top: 73.85%;
+left: 83.1%;
 
-    @media screen and (max-width: 868px) {
-        left: 76%;
-        top: 73.5%;
-    }
-`
-
-const ItemName = styled.div`
-    background-color: #fff;
-    position: absolute;
-    height: 10rem;
-    width: 10rem;
-    margin: 1.35rem;
-    padding-left: 4.5%;
-
-    h4 {
-        font-family: Poppins-bold;
-        font-size: 21px;
-        margin: 1.35rem;
-        position: absolute;
-        top: 3.4px;
-        left: 5px;
-        line-height: 1.36;
-        width: 90%;
-    }
-
-    hr {
-        margin-top: 39px;
-        height: 4px;
-        width: 37px;
-        position: relative;
-        bottom: -11px;
-    }
-
-    p {
-        font-size: 13.5px;
-        position: relative;
-        margin-top: 18px;
-    }
+@media screen and (max-width: 868px) {
+    left: 76%;
+}
 `
 
 const ItemSquare = styled.div`
-    background-color: #ffc439;
-    position: relative;
-    height: 31px;
-    width: 31px;
-    margin-top: 1.2rem;
-    left: -4.7%;
+background-color: #ffc439;
+position: relative;
+height: 32px;
+width: 32px;
+margin-top: 18.5px;
+left: -4.4%;
 `

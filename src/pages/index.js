@@ -7,9 +7,13 @@ import OwnOffice from "../components/OwnOffice"
 import News from "../components/News"
 import Gallery from "../components/Gallery"
 import Seo from "../components/SEO"
+import {Helmet} from 'react-helmet'
 
 const IndexPage = () => (
   <Layout>
+  <Helmet>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  </Helmet>
     <Seo />
     <Hero />
     <Offer />

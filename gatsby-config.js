@@ -5,6 +5,7 @@ module.exports = {
     author: `@maksbrzezinski`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
@@ -37,15 +38,5 @@ module.exports = {
         path: `./src/data/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Poppins\:300, 400, 700, 900`,
-          `Poppins-bold`,
-        ],
-        display: 'swap'
-      }
-    }
   ],
 }

@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai'
-import {StaticImage} from 'gatsby-plugin-image'
-import Img from 'gatsby-image'
 import Gallery1 from "../images/Office1.jpeg"
 import Gallery2 from "../images/Office2.jpeg"
 import Gallery3 from "../images/Office3.jpeg"
@@ -23,17 +21,18 @@ const Gallery = () => {
       </Element3>
       <Element4>
           <h1>Galeria</h1>
-          <hr css={`height: 10px;`}/>
+          <div />
       </Element4>
       <Element5>
         <img src={Gallery4} alt="Galeria4" />
       </Element5>
+      
       <GalleryArrows>
         <Arrow1>
-          <AiOutlineArrowLeft />
+          <AiOutlineArrowLeft class="arrow-btn left" />
         </Arrow1>
         <Arrow2>
-          <AiOutlineArrowRight />
+          <AiOutlineArrowRight class="arrow-btn right" />
         </Arrow2> 
       </GalleryArrows>
     </GalleryContainer>
@@ -43,12 +42,16 @@ const Gallery = () => {
 export default Gallery;
 
 const GalleryContainer = styled.div`
-    height: 87.2vh;
-    margin: 67px 0 67px 0;
+    height: 86.5vh;
+    margin: 64px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
     `
 
 const Element1 = styled.div`
@@ -57,9 +60,7 @@ const Element1 = styled.div`
 
   img {
     height: 87.2vh;
-    position: relative;
     width: 32.55vw;
-    object-fit: cover;
   }
 `
 
@@ -70,10 +71,8 @@ const Element2 = styled.div`
   justify-content: center;
 
   img {
-    height: 53.75vh;
-    position: relative;
+    height: 53.3vh;
     width: 40vw;
-    object-fit: cover;
   }
 `
 const Element3 = styled.div`
@@ -83,35 +82,32 @@ const Element3 = styled.div`
   justify-content: center;
 
   img {
-    height: 31.5vh;
-    position: relative;
+    height: 31.3vh;
     width: 40vw;
-    object-fit: cover;
   }
 `
 const Element4 = styled.div`
   grid-area: 1 / 3 / 2 / 4;
-  margin: 7px 31.3% 0 0;
+  margin: 7px 0 0 -33.5%;
+  position: relative;
+  width: 23.5vw; 
 
   h1 {
-      text-align: right;
-      margin-right: 9.15%;
-      margin-top: 0.5%;
-      font-family: Poppins-bold;
-      font-size: 48.5px;
+    text-align: right;
+    font-family: "Poppins-bold", sans-serif;
+    font-size: clamp(15px, 8vw, 48.5px);
+  }
+
+  div {
+      background-color: #000; 
+      height: clamp(8px, 1.6vw, 16px); 
+      margin-top: 10%;
     }
 
-  hr {
-    position: absolute;
-    width: 23.5vw; 
-    background-color: black; 
-    color: black; 
-    height: 1rem; 
-    border: 0px; 
-    margin-top: 26px;
-    right: 9.1%;
-    opacity: 1;
-  }
+    @media (max-width: 768px) {
+      margin: 26px 0 0 -15vw;
+      width: 30vw; 
+    }
 `
 
 const Element5 = styled.div`
@@ -120,39 +116,38 @@ const Element5 = styled.div`
 
   img {
     height: 60vh;
-    position: relative;
     width: 100%;
-    object-fit: cover;
   }
 `
 
 const GalleryArrows = styled.div`
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40vh;
+    width: 100vw;
     z-index: 1;
-    text-align: center;
-    margin: auto;
+
+    .arrow-btn {
+      padding: 25%;
+      background-color: #fff;
+      height: 6.1rem;
+      width: 6.1rem;
+      margin-top: -24%;
+    }
+
+    .left {
+      margin-left: 11%;
+    }
+
+    .right {
+    }
 `
 
 const Arrow1 = styled.div`
-    position: absolute;
-    padding-top: 9px;
-    font-size: 3rem;
-    background-color: white;
-    display: block;
-    align-items: center;
-    height: 6.05rem;
-    width: 6.05rem;
-    top: 37.3vh;
-    left: 0.8vw;
 `
+
 const Arrow2 = styled.div`
-    position: absolute;
-    padding-top: 9px;
-    left: 92.5vw;
-    top: 37.3vh;
-    font-size: 3rem;
-    background-color: white;
-    display: block;
-    height: 6.05rem;
-    width: 6.05rem;
+  margin-left: auto;
+  margin-right: 0.8%;
 `

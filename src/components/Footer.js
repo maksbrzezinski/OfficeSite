@@ -1,31 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'gatsby'
 
 const Footer = () => {
   return (
     <FooterContainer>
         <CompanyDetails>
             <h1>LOGO</h1>
-            <p>ul. Towarowa 5/6 31-000 Kraków</p>
-            <p css={`font-family: Poppins-bold; margin-top: 0.3rem;`}>+48 999 999 999 email@email.com</p>
+            <p>ul. Towarowa 5/6 <br />31-000 Kraków</p>
+            <p>+48 999 999 999 <br />email@email.com</p>
+            <p>Polityka prywatności</p>
         </CompanyDetails>
         <LinksContainer>
             <ul>
                 <li>Strona główna</li>
-                <li css={`margin-top: 1px;`}>Poznaj przestrzeń</li>
+                <li class="lower">Poznaj przestrzeń</li>
                 <li>Oferta</li>
             </ul>
-            <ul css={``}>
+            <ul>
                 <li>Lokalizacja</li>
                 <li>Własne biuro</li>
                 <li>Kontakt</li>
             </ul>
         </LinksContainer>
-        <BottomLinks>
-            <p>Polityka prywatności</p>
-            <p>Proudly reproduced by Maks Brzeziński</p>
-        </BottomLinks>
+            <p className="reproduced">Reproduced by Maks Brzeziński</p> 
     </FooterContainer>
   )
 }
@@ -33,28 +30,50 @@ const Footer = () => {
 export default Footer
 
 const FooterContainer = styled.div`
-    padding: 5rem calc((100vw - 1100px) /2);
+    padding: 5vw 11.8vw;
     display: flex;
     position: relative;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     margin: 8rem auto 0;
-    min-height: 53.6vh;
+    height: 410px;
     color: #fff;
-    background: #000;
+    background-color: #000;
+
+    .reproduced {
+        position: absolute;
+        font-size: 9px;
+        width: 30vw;
+        bottom: 4%;
+        right: -10.5%;
+    }
+
+    @media (max-width: 768px) {
+        .reproduced {
+            right: 2%;
+        }
+    }
 `
 
 const CompanyDetails = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 7.5vw;
-    position: relative;
-    left: -3.75%;
-    top: -36px;
+    width: 18vw;
+    height: 100%;
+    margin-top: -1.1%;
+    margin-left: -3.75%;
+    
+    @media (max-width: 768px) {
+        width: 50vw;
+    }
+
+    h1, p ~ p {
+        font-family: "Poppins-bold", sans-serif; 
+    }
 
     h1 {
-        font-family: Poppins-bold;
         font-size: 49px;
         margin-bottom: 2.15rem;
     }
@@ -64,41 +83,50 @@ const CompanyDetails = styled.div`
         margin-left: 3px;
         line-height: 19px;
     }
+
+    p ~ p {
+        margin-top: 0.3rem;
+    }
+
+    p:last-of-type {
+        font-family: "Poppins", sans-serif;
+        font-size: 9px;
+        padding-top: 61%;
+
+        @media (max-width: 768px) {
+            padding-top: 11vh;
+    }
+    }
 `
 
 const LinksContainer = styled.div`
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 27.35%;
     position: relative;
-    justify-content: end;
+    display: flex; 
+    flex-direction: row;
+    height: 100%;
+    width: 100vw;
+    margin-left: 28.5%;
+    top: 1px;
     text-align: left;
     align-items: center;
-    top: 1px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 
     ul {
         list-style-type: none;
-        width: 16.7vw;
+        width: 16.6vw;
         line-height: 30px;
-    }
-
-    li {
         font-size: 12px;
+
+    @media (max-width: 768px) {
+        width: 50vw;
+        margin-left: 1%;
     }
-`
+    }
 
-const BottomLinks = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: absolute;
-    top: 88.5%;
-    left: 9.1%;
-    font-size: 9px;
-    width: 100%;
-    height: auto;
-
-    p {
-        width: 71.4vw;
-        /* grid-gap: 40vw; */
+    .lower {
+        margin-top: 1px;
     }
 `
