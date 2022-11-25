@@ -88,7 +88,11 @@ const HeroContainer = styled.div`
 
         @media (max-width: 1300px) {
             flex-direction: column;
-            align-items: center;
+        }
+
+        @media (max-width: 910px) {
+            align-items: flex-start;
+            justify-content: flex-start;
         }
     }
 
@@ -146,8 +150,10 @@ const HeroBG = styled.div`
 `
 
 const HeroText = styled.div`
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 50vw;
+    width: 50%;
     margin: 54.3vh 0 0 15vh;
     color: #000;
 
@@ -177,15 +183,19 @@ const HeroText = styled.div`
 
 const HeroForm = styled.div`
     position: relative;
+    display: flex;
     background-color: #fff;
     height: 478px;
-    width: 338px;
+    /* width: 338px; */
+    width: 50%;
+    max-width: 338px;
     margin: 20.5vh 0 0 15.5vh;
+
     padding: 1.65% 1.75% 3.2% 1.8%;
     z-index: 2;
 
     @media screen and (max-width: 1300px) {
-        margin: 3vh auto;
+        margin: 3vh 0;
         padding: 2.2%;
     }
 

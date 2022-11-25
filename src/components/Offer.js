@@ -8,66 +8,69 @@ const Offer = () => {
     
     return (
         <ServicesWrapper>
-            <TopContainer className="Container">
-                <StaticImage src="../images/Work1.jpeg" />
+            <TopRow>
+                <TopContainer className="Container oneContainer">
+                    <StaticImage className="photo" src="../images/Work1.jpeg" />
 
-                <Link to="/" >
-                    <Arrow className="arrowTop" />
-                </Link>
+                    <Link to="/" >
+                        <Arrow className="arrowTop" />
+                    </Link>
 
-                <div className="one">
-                    <ItemSquare />
-                    <h4>Biuro</h4>
-                    <Underline className="oneCustomDiv" />
-                    <p className="oneCustomP">od 1000 zł/msc</p>
-                </div>
-            </TopContainer>
+                    <div className="one">
+                        <ItemSquare />
+                        <h4>Biuro</h4>
+                        <Underline className="oneCustomDiv" />
+                        <p className="oneCustomP">od 1000 zł/msc</p>
+                    </div>
+                </TopContainer>
 
-            <TopContainer className="Container">
-                <StaticImage src="../images/Work2.jpeg" />
+                <TopContainer className="Container twoContainer">
+                    <StaticImage className="photo" src="../images/Work2.jpeg" />
 
-                <Link to="/" >
-                    <Arrow className="arrowTop" />
-                </Link>
+                    <Link to="/" >
+                        <Arrow className="arrowTop" />
+                    </Link>
 
-                <div className="two">
-                    <ItemSquare />
-                    <h4>Lorem<br /> ipsum</h4>
-                    <Underline />
-                    <p>od 500 zł/msc</p>
-                </div>
-            </TopContainer>
+                    <div className="two">
+                        <ItemSquare />
+                        <h4>Lorem<br /> ipsum</h4>
+                        <Underline />
+                        <p>od 500 zł/msc</p>
+                    </div>
+                </TopContainer>
+            </TopRow>
 
+            <BottomRow>
+                <BottomContainer className="Container threeContainer">
+                    <StaticImage className="photo" src="../images/Work3.jpeg" />
 
-            <BottomContainer className="Container">
-                <StaticImage src="../images/Work3.jpeg" />
+                    <Link to="/" >
+                        <Arrow className="arrowBottom" />
+                    </Link>
 
-                <Link to="/" >
-                    <Arrow className="arrowBottom" />
-                </Link>
+                    <div className="three">
+                        <ItemSquare />
+                        <h4>Biuro<br /> lorem</h4>
+                        <Underline />
+                        <p>od 100 zł/h</p>
+                    </div>
+                </BottomContainer>
 
-                <div className="three">
-                    <ItemSquare />
-                    <h4>Biuro<br /> lorem</h4>
-                    <Underline />
-                    <p>od 100 zł/h</p>
-                </div>
-            </BottomContainer>
+                <BottomContainer className="Container">
+                    <StaticImage className="photo" src="../images/Work4.jpeg" />
 
-            <BottomContainer className="Container">
-                <StaticImage src="../images/Work4.jpeg" />
+                    <Link to="/" >
+                        <Arrow className="arrowBottom" />
+                    </Link>
 
-                <Link to="/" >
-                    <Arrow className="arrowBottom" />
-                </Link>
-
-                <div className="four">
-                    <ItemSquare className="squareFour"/>
-                    <h4>Biuro lorem ipsum Lorem</h4>
-                    <Underline />
-                    <p className="fourCustomP">od 100 zł/h</p>
-                </div>
-            </BottomContainer>
+                    <div className="four">
+                        <ItemSquare className="squareFour"/>
+                        <h4>Biuro lorem ipsum Lorem</h4>
+                        <Underline />
+                        <p className="fourCustomP">od 100 zł/h</p>
+                    </div>
+                </BottomContainer>
+            </BottomRow>
         </ServicesWrapper>
     )
 }
@@ -75,9 +78,8 @@ const Offer = () => {
 export default Offer;
 
 const ServicesWrapper = styled.div`
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-gap: 1.2% 1.9%;
+display: flex;
+flex-direction: column;
 position: relative;
 justify-items: center;
 margin: 6.5% auto;
@@ -88,8 +90,10 @@ width: 81.8vw;
     position: relative;
     display: flex;
     flex-direction: row;
+    margin: 0.6% 1%;
     width: 100%;
 }
+
 
 h4 {
     position: absolute;
@@ -203,6 +207,14 @@ margin-top: 2%;
 const BottomContainer = styled.div`
 height: 70.5%;
 `
+
+const TopRow = styled.div`
+    display: flex;
+    `
+
+const BottomRow = styled.div`
+    display: flex;
+    `
 
 const Arrow = styled(AiOutlineArrowRight)`
 position: absolute;
