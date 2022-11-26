@@ -25,46 +25,13 @@ return (
         </Carousel>
     </HeroBG>
 
-{/* <div className="container-fluid">
-    <div className="headerLayout">
-        <HeroText>
-            <h1>Firma</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor</p>
-        </HeroText>
-
-        <HeroForm controlId="myFormGroup" name="contact-form" method="post" data-netlify="true" action="#">  
-            <form method="post">
-                <FormText>
-                    <h2>Lorem ipsum</h2>
-                    <h3>Lorem ipsum lorem ipsum</h3>
-                    <p>consectetur adipiscing elit. Ut auctor arcu</p>
-                    <p>Zostaw kontakt, zadzwonimy do Ciebie</p>
-                </FormText>
-                <FormLabels>   
-                    <input type="text" placeholder="Imię i nazwisko" required={true} />
-                    <input type="text" placeholder="Telefon" required={true} />
-                    <input type="email" placeholder="Email" required={true} />
-                    <input type="text" placeholder="Lorem ipsum lorem ipsum" required={true} />
-                </FormLabels>
-                <FormCheck>
-                    <input type="checkbox" className="tickBox" required={true} />
-                    <p>Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych więcej...</p>
-                </FormCheck>
-                <FormButton>
-                    <button type="submit">WYŚLIJ</button>
-                </FormButton>
-            </form>
-        </HeroForm>
-    </div>
-</div> */}
-
 <div className="container-fluid custom-container">
     <div className="row">
-        <HeroTextt className="d-flex flex-row col-7">
+        <HeroTextt className="d-flex col-8">
             <h1>Firma</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor</p>
+            <p>Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Ut auctor</p>
         </HeroTextt>
-        <div className="form d-flex flex-row-reverse col-5">
+        <div className="form d-flex flex-row-reverse col-4">
             <HeroForm controlId="myFormGroup" name="contact-form" method="post" data-netlify="true" action="#">  
                 <form method="post">
                     <h2>Lorem ipsum</h2>
@@ -114,8 +81,8 @@ const HeroContainer = styled.div`
 
     .custom-container {
         margin-top: 78px;
-        padding-left: 8.5%;
-        padding-right: 8.5%;
+        padding-left: 8.6%;
+        padding-right: 8.6%;
     }
 
     .form {
@@ -183,12 +150,9 @@ const HeroBG = styled.div`
     width: 100%;
     overflow: hidden;
 
-    background-color: #333;
-
     img {
         min-height: 100%;
         min-width: 100%;
-        display: none;
     }
 `
 
@@ -225,6 +189,22 @@ const HeroText = styled.div`
 `
 
 const HeroTextt = styled.div `
+    position: relative;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 38px;
+
+    h1 {
+        // font-size: clamp(16px, 3.35vw, 64.4px);
+        font-size: 65px;
+        font-family: "Poppins-bold", sans-serif;
+    }
+
+    p {
+        // font-size: clamp(0.5rem, 2.5vw, 48px);
+        font-size: 48px;
+        margin-top: 9px;
+    }
 `
 
 const HeroForm = styled.div`
@@ -237,7 +217,7 @@ const HeroForm = styled.div`
     height: auto;
     min-height: 638px;
     padding: 33px;
-    margin-right: 3.9%;
+    margin-right: -7%;
 
     h2, h3 {
         margin-top: -2px;
