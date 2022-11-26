@@ -8,7 +8,7 @@ import {Link} from 'gatsby'
 import {BsFillArrowUpSquareFill} from 'react-icons/bs'
 
 const Hero = () => {
-  return (
+return (
 
 <HeroContainer>
     <HeroBG>
@@ -25,6 +25,7 @@ const Hero = () => {
         </Carousel>
     </HeroBG>
 
+{/* <div className="container-fluid">
     <div className="headerLayout">
         <HeroText>
             <h1>Firma</h1>
@@ -55,6 +56,38 @@ const Hero = () => {
             </form>
         </HeroForm>
     </div>
+</div> */}
+
+<div className="container-fluid custom-container">
+    <div className="row">
+        <HeroTextt className="d-flex flex-row col-7">
+            <h1>Firma</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor</p>
+        </HeroTextt>
+        <div className="form d-flex flex-row-reverse col-5">
+            <HeroForm controlId="myFormGroup" name="contact-form" method="post" data-netlify="true" action="#">  
+                <form method="post">
+                    <h2>Lorem ipsum</h2>
+                    <h3>Lorem ipsum lorem ipsum</h3>
+                    <p>consectetur adipiscing elit. Ut auctor arcu</p>
+                    <p>Zostaw kontakt, zadzwonimy do Ciebie</p>
+
+                    <input type="text" placeholder="Imię i nazwisko" required={true} className="first-input" />
+                    <input type="text" placeholder="Telefon" required={true} />
+                    <input type="email" placeholder="Email" required={true} />
+
+                    <input type="text" placeholder="Lorem ipsum lorem ipsum" required={true} />
+                    <div className="data-consent d-flex flex-row">
+                        <input type="checkbox" className="tickBox" required={true} />
+                        <p>Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych więcej...</p>
+                    </div>
+
+                    <button type="submit"><span>WYŚLIJ</span></button>
+                </form>
+            </HeroForm>
+        </div>
+    </div>
+</div>
 
     <Link to="/">
         <ArrowUp>
@@ -63,7 +96,7 @@ const Hero = () => {
     </Link>
 
 </HeroContainer>
-  )
+)
 }
 
 export default Hero
@@ -71,7 +104,7 @@ export default Hero
 const HeroContainer = styled.div`
     display: flex;
     position: relative;
-    height: 95vh;
+    min-height: 965px;
     width: 100vw;
     margin: -104px 0 4rem;
     padding: 0 1rem;
@@ -79,12 +112,20 @@ const HeroContainer = styled.div`
     align-items: center;
     overflow: hidden;
 
+    .custom-container {
+        margin-top: 78px;
+        padding-left: 8.5%;
+        padding-right: 8.5%;
+    }
+
+    .form {
+        padding-right: 0;
+    }
+
     .headerLayout {
         position: relative;
         display: flex;
         flex-direction: row;
-        height: 100%;
-        width: 100%;
 
         @media (max-width: 1300px) {
             flex-direction: column;
@@ -136,16 +177,18 @@ const HeroContainer = styled.div`
 
 const HeroBG = styled.div`
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 24px;
+    left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
 
+    background-color: #333;
+
     img {
-        min-height: 100vh;
-        min-width: 100vw;
+        min-height: 100%;
+        min-width: 100%;
+        display: none;
     }
 `
 
@@ -181,107 +224,104 @@ const HeroText = styled.div`
     }
 `
 
-const HeroForm = styled.div`
-    position: relative;
-    display: flex;
-    background-color: #fff;
-    height: 478px;
-    /* width: 338px; */
-    width: 50%;
-    max-width: 338px;
-    margin: 20.5vh 0 0 15.5vh;
-
-    padding: 1.65% 1.75% 3.2% 1.8%;
-    z-index: 2;
-
-    @media screen and (max-width: 1300px) {
-        margin: 3vh 0;
-        padding: 2.2%;
-    }
-
-    @media (max-width: 768px) {
-        padding: 3.8%;
-    }
+const HeroTextt = styled.div `
 `
 
-const FormText = styled.div`
+const HeroForm = styled.div`
+    display: flex;
     position: relative;
-    color: black;
+    flex-direction: row;
+    background-color: #fff;
+    max-width: 449px;
+    min-width: 345px;
+    height: auto;
+    min-height: 638px;
+    padding: 33px;
+    margin-right: 3.9%;
 
     h2, h3 {
-        top: -1px;
-        font-size: clamp(1.2rem, 1.46vw, 28px); 
-        font-family: "Poppins-bold", sans-serif;
-        margin-bottom: 3px;
+        margin-top: -2px;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        // font-size: clamp(1.2rem, 1.49vw, 28px); 
+        font-size: 28px; 
+        // margin-left: -1px;
+        line-height: 35px;
     }
 
     p {
-        font-size: clamp(13.5px, 0.9vw, 18px);
-
+    // font-size: clamp(13.5px, 1vw, 18px);
+    font-size: 18px;
     }
 
     p:first-of-type {
         color: #959595;
-        margin-top: 7px;
+        margin-top: 8px;
     }
 
     p:last-of-type {
         font-family: "Poppins-bold", sans-serif;
-        margin-top: -8px;
+        margin-top: -6px;
     }
-`
-
-const FormLabels = styled.div`
-    color: black;
-    display: flex;
-    flex-direction: column;
-    margin: 3.1vh 0 0;
 
     input {
+        display: flex;  
+        color: black;
+        flex-direction: column;
+        width: 100%;
         border: 1px solid; 
-        line-height: 4.95vh;
-        margin-bottom: 14px;
+        line-height: 50px;
+        margin-bottom: 20px;
         padding-left: 5%;
-        font-size: clamp(13.5px, 0.9vw, 18px);
-    }
-`
-
-const FormCheck = styled.div`
-    display: flex;
-    position: relative;
-    color: #000;
-    top: -1px;
-    line-height: 1.6;
-
-    p {
-        font-size: clamp(7px, 0.52vw, 10px);
-        margin-left: 11px;
-        margin-top: 1px;
+        // font-size: clamp(13.5px, 0.9vw, 18px);
+        font-size: 18px;
     }
 
-    input[type=checkbox] {
-        width: 19px;
-        height: 19px;
+    .first-input {
+        margin-top: 34px;
     }
-`
 
-const FormButton = styled.button`
-    border: none;
-    background-color: #000;
-    color: #fff;
-    height: 5.1vh;
-    width: 100%;
-    margin-top: 2px;
-    font-size: clamp(12px, 0.9vw, 17.5px);
-    justify-content: center;
+    .data-consent {
+        display: flex;
+        position: relative;
+        align-items: center;
+        color: #000;
+        line-height: 1.6;
+        margin-top: -2px;
+
+        p {
+            // font-size: clamp(7px, 0.52vw, 10px);
+            font-family: 'Poppins', sans-serif;
+            font-size: 9.9px;
+            font-weight: 500;
+            margin: -7px 0 0 15px
+        }
+    
+        input[type=checkbox] {
+            width: 24px;
+            height: 24px;
+        }
+    }
 
     button {
-        background-color: transparent;
-        color: #fff;
         border: none;
-        font-family: "Poppins-bold", sans-serif;
-        letter-spacing: 3px;
-        margin-left: 7px;
+        background-color: #000;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        // font-size: clamp(12px, 0.9vw, 17.5px);
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 4px;
+        justify-content: center;
+        height: 52px;
+        width: 100%;
+        border: none;
+        margin-top: 15px;
+
+        span {
+            padding-left: 8px;
+        }
     }
 `
 
