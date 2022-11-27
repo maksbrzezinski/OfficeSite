@@ -12,26 +12,34 @@ return (
 
 <HeroContainer>
     <HeroBG>
-        <Carousel>
-            <Carousel.Item>
-                <img src={slide01} alt="First Office" />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img src={slide02} alt="Second Office" />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img src={slide03} alt="Third Office" />
-            </Carousel.Item>
-        </Carousel>
+        <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <img src={slide01} className="d-block w-100 bg-secondary"  alt="photo 1" />
+                </div>
+                <div className="carousel-item">
+                    <img src={slide02} className="d-block w-100 bg-secondary" alt="photo 2" />
+                </div>
+                <div className="carousel-item">
+                    <img src={slide03} className="d-block w-100 bg-secondary" alt="photo 3" />
+                </div>
+            </div>
+            <a className="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                <span className="fa-solid fa-arrow-left" aria-hidden="true"></span>
+            </a>
+            <a className="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                <span className="fa-solid fa-arrow-right" aria-hidden="true"></span>
+            </a>
+        </div>
     </HeroBG>
 
 <div className="container-fluid custom-container">
-    <div className="row">
-        <HeroTextt className="d-flex col-8">
+    <div className="row custom-row">
+        <HeroText className="d-flex col-12 col-sm-8">
             <h1>Firma</h1>
             <p>Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Ut auctor</p>
-        </HeroTextt>
-        <div className="form d-flex flex-row-reverse col-4">
+        </HeroText>
+        <div className="form d-flex lg-flex-row-reverse col-12 col-lg-4">
             <HeroForm controlId="myFormGroup" name="contact-form" method="post" data-netlify="true" action="#">  
                 <form method="post">
                     <h2>Lorem ipsum</h2>
@@ -71,18 +79,18 @@ export default Hero
 const HeroContainer = styled.div`
     display: flex;
     position: relative;
-    min-height: 965px;
+    min-height: 953px;
     width: 100vw;
-    margin: -104px 0 4rem;
+    margin: -126px 0 4rem;
     padding: 0 1rem;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
     .custom-container {
-        margin-top: 78px;
-        padding-left: 8.6%;
-        padding-right: 8.6%;
+        margin-top: 68px;
+        padding-left: 8.4%;
+        padding-right: 8.4%;
     }
 
     .form {
@@ -104,12 +112,77 @@ const HeroContainer = styled.div`
         }
     }
 
+    // .carousel-control-prev, .carousel-control-next {
+    //     position: absolute;
+    //     height: 90px;
+    //     width: 116px;
+    //     top: 83.5vh;
+    //     background-color: #000;
+    //     opacity: 1;
+
+    //     @media (max-width: 768px) {
+    //         display: none;
+    //     }
+    // }
+
+    // .carousel-control-next {
+    //     margin-right: 84.1%;
+    // }
+
+
+    @media (max-width: 991px) {
+        min-height: 1100px;
+
+        .custom-container {
+            padding-left: 2.4%;
+            padding-right: 2.4%;
+            .custom-row {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .custom-container {
+            .custom-row {
+                margin-top: 60px;
+            }
+        }
+    }
+    @media (max-width: 580px) {
+        .custom-container {
+            .custom-row {
+                margin-top: 80px;
+            }
+    }
+`
+
+const HeroBG = styled.div`
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        min-height: 953px;
+        min-width: 100%;
+    }
+
+    .carousel .slide {
+        position: relative;
+    }
+
     .carousel-control-prev, .carousel-control-next {
         position: absolute;
-        height: 90px;
-        width: 116px;
-        top: 83.5vh;
+        height: 117px;
+        width: 153px;
+        // top: 83.5vh;
+        top: 835px;
         background-color: #000;
+        font-size: 38px;
         opacity: 1;
 
         @media (max-width: 768px) {
@@ -118,92 +191,69 @@ const HeroContainer = styled.div`
     }
 
     .carousel-control-next {
-        margin-right: 84.1%;
+        margin-right: 84.2%;
     }
 
+    a {
+        text-decoration: none;       
+    }
+
+    @media (max-width: 1600px) {
+        .carousel-control-next {
+            margin-right: 81%;
+        }
     @media (max-width: 1300px) {
-        height: auto;
-
         .carousel-control-next {
-            margin-right: 82%;
+            margin-right: 76.5%;
         }
     }
-
-    @media (max-width: 1100px) {
+    @media (max-width: 1050px) {
         .carousel-control-next {
-            margin-right: 80%;
+            margin-right: 72%;
         }
     }
-
-    @media (max-width: 900px) {
-        .carousel-control-next {
-            margin-right: 78%;
+    @media (max-width: 991px) {
+        img {
+            min-height: 1100px;
         }
+        .carousel-control-next {
+            display: none;
+        }
+        .carousel-control-prev {
+            display: none;
+        }
+    }
     }
 `
 
-const HeroBG = styled.div`
-    position: absolute;
-    top: 24px;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-
-    img {
-        min-height: 100%;
-        min-width: 100%;
-    }
-`
-
-const HeroText = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 50%;
-    margin: 54.3vh 0 0 15vh;
-    color: #000;
-
-    h1 {
-        font-size: clamp(16px, 3.35vw, 64.4px);
-        font-family: "Poppins-bold", sans-serif;
-        letter-spacing: 0.4px;
-    }
-
-    p {
-        font-size: clamp(0.5rem, 2.5vw, 48px);
-        margin-top: 12px;
-    }
-
-    @media (max-width: 1300px) {
-        margin: 25vh auto 0;
-
-        h1 {
-            font-size: 32px;
-        }
-
-        p {
-            font-size: 18px;
-        }
-    }
-`
-
-const HeroTextt = styled.div `
+const HeroText = styled.div `
     position: relative;
     flex-direction: column;
     justify-content: end;
     margin-bottom: 38px;
 
     h1 {
-        // font-size: clamp(16px, 3.35vw, 64.4px);
+        // font-size: clamp(16px, 3.35vw, 65px);
         font-size: 65px;
         font-family: "Poppins-bold", sans-serif;
+        color: #fff;
     }
 
     p {
         // font-size: clamp(0.5rem, 2.5vw, 48px);
         font-size: 48px;
         margin-top: 9px;
+        color: #fff;
+    }
+
+    @media (max-width: 1120px) {
+        h1 {
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 24px;
+        }
     }
 `
 
@@ -217,7 +267,7 @@ const HeroForm = styled.div`
     height: auto;
     min-height: 638px;
     padding: 33px;
-    margin-right: -7%;
+    margin-left: 9%;
 
     h2, h3 {
         margin-top: -2px;
