@@ -35,11 +35,11 @@ return (
 
 <div className="container-fluid custom-container">
     <div className="row custom-row">
-        <HeroText className="d-flex col-12 col-sm-8">
+        <HeroText className="d-flex col-12 col-sm-8 col-xl-7">
             <h1>Firma</h1>
             <p>Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Ut auctor</p>
         </HeroText>
-        <div className="form d-flex lg-flex-row-reverse col-12 col-lg-4">
+        <div className="form d-flex lg-flex-row-reverse col-12 col-lg-4 col-xl-5">
             <HeroForm controlId="myFormGroup" name="contact-form" method="post" data-netlify="true" action="#">  
                 <form method="post">
                     <h2>Lorem ipsum</h2>
@@ -145,17 +145,22 @@ const HeroContainer = styled.div`
     }
     @media (max-width: 768px) {
         .custom-container {
+            padding-left: 0;
+            padding-right: 0;
+            .form {
+                margin-left: -8%;
+            }
             .custom-row {
                 margin-top: 60px;
             }
         }
     }
-    @media (max-width: 580px) {
-        .custom-container {
-            .custom-row {
-                margin-top: 80px;
-            }
-    }
+    // @media (max-width: 580px) {
+    //     .custom-container {
+    //         .custom-row {
+    //             margin-top: 60px;
+    //         }
+    // }
 `
 
 const HeroBG = styled.div`
