@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <GlobalStyle />
       <Header />
       <main>{children}</main>
-      <Footer />
+      <Footer /> {/* adds a lot of margin-right */}
   </>
   )
 }

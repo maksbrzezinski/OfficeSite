@@ -22,7 +22,7 @@ const IndexPage = () => (
     <Seo />
     <Hero />
     <Offer />
-    <Amenities />
+    <Amenities />  {/* adds a bit of margin-right */}
     <OwnOffice />
     <News />
     <Gallery />
