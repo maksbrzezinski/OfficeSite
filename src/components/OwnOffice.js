@@ -46,18 +46,15 @@ export default Amenities;
 
 const OOContainer = styled.div`
     position: relative;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
-    /* margin: 9.5rem auto 2rem 8.2rem; */
-    margin-top: 98px;
-    /* left: 8.3%; */
-    height: 62.7vh;
+    margin-top: 78px;
+    // min-height: 62.7vh;
+    min-height: 643px;
     width: 100vw;
-    /* width: 91.7%; */
 
     Img {
-      height: 62.7vh;
+      height: 100%;
       width: 100vw;
       margin-left: 17.45%;
       z-index: -2;
@@ -67,7 +64,6 @@ const OOContainer = styled.div`
       position: relative;
       height: 110px;
       width: 110px;
-      /* line-height: 12.8px; */
     }
 
     .decorationLines {
@@ -101,26 +97,26 @@ const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    height: 43.7vh;
-    width: 33.3vw;
-    margin-left: 9.1%;
-    /* margin: 1% 9.1% 0 0; */
-    /* font-size: 1.5rem; */
-    padding: 0 10px 8px 0;
+    max-height: 448px;
+    max-width: 815px;
+    padding-left: 175px;
+    // padding: 0 10px 8px 0;
 
     p {
       position: relative;
-      font-family: 'Poppins-bold', sans-serif;
-      font-size: clamp(15px, 6vw, 48.8px);
-      line-height: 1.15;
-      margin: 35% 5% 5% 0;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 65px;
+      line-height: 1.16;
+      margin-top: 220px;
+      // margin: 35% 5% 5% 0;
 
       div {
         position: relative;
         background-color: #000; 
-        width: 31.8vw; 
-        height: clamp(7px, 2vh, 15px); 
-        margin-top: 8.9vw;
+        width: 610px; 
+        height: 20px; 
+        margin-top: 170px;
         z-index: 5;
       }
     }
