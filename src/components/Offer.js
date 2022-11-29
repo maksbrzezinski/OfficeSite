@@ -139,6 +139,10 @@ padding-right: 8.4%;
         position: relative;
         margin-top: -35px;
         line-height: 40px;
+
+        @media (max-width: 991px) {
+            font-size: 24px;
+        }
     }
 
     span {
@@ -204,7 +208,7 @@ padding-right: 8.4%;
 
     .office-tiles > div {
         min-width: 100%;
-        min-height: 300px;
+        min-height: 380px;
     } 
 }
 `
