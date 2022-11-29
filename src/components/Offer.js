@@ -62,21 +62,15 @@ const Offer = () => {
 export default Offer;
 
 const ServicesWrapper = styled.div`
-// flex-direction: column;
 position: relative;
-// justify-items: center;
-// margin: 6.5% auto;
 margin-top: 125px;
-height: 80vh;
-// width: calc(100% + 60px);
-// width: 81.8vw;
+min-height: 80vh;
 padding-left: 8.4%;
 padding-right: 8.4%;
 
 .office-tiles {
     display: flex;
     flex-flow: wrap;
-    // width: calc(100% + 60px)
 }
 
 .photo-container-upper {
