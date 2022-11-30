@@ -31,19 +31,19 @@ function getNews(data) {
   const newsArray = []
   data.allNewsDataJson.edges.forEach((item, index) => {
       newsArray.push(
-          <NewsBox key={index}>
-            <PhotoImg 
-              alt={item.node.alt}
-              fluid={item.node.img.childImageSharp.fluid}
-            />
-            <NewsInfo>
-              <Date>{item.node.date}</Date>
-              <Title>{item.node.name}</Title>
-              <NewsLink>
-                <Link to={item.node.link}>Więcej</Link>
-              </NewsLink>
-            </NewsInfo>
-          </NewsBox>
+        <NewsBox key={index}>
+          <PhotoImg 
+            fluid={item.node.img.childImageSharp.fluid}
+            alt={item.node.alt}
+          />
+          <NewsInfo>
+            <Date>{item.node.date}</Date>
+            <Title>{item.node.name}</Title>
+            <NewsLink>
+              <Link to={item.node.link}>Więcej</Link>
+            </NewsLink>
+          </NewsInfo>
+        </NewsBox>
       )
       })
   return newsArray
@@ -61,36 +61,55 @@ export default Amenities;
 
 const NewsBox = styled.div`
   position: relative;
+  max-width: 450px;
+  margin: 0 55px;
+
+  @media (max-width: 1680px) {
+    margin: 0 20px;
+  }
+
+  @media (max-width: 1470px) {
+    max-width: 350px;
+  }
+
+  @media (max-width: 1170px) {
+    margin-top: 40px;
+  }
 `
 
 const PhotoImg = styled(Img)`
-    height: 73%;
-    width: 23.4vw;
+    height: 335px;
+    width: 450px;
+
+    @media (max-width: 1470px) {
+      max-width: 350px;
+    }
 `
 
 const NewsInfo = styled.div`
     display: flex;
     flex-direction: column;
-    height: 45vh;
+    // height: 45vh;
     width: 100%;
     padding: 2% 0;
+    margin-top: 7px;
 `
 
 const Date = styled.div`
-    font-size: 13.5px;
+    font-size: 18px;
     padding-top: 3.6%;
 `
 
 const Title = styled.div`
     font-family: 'Poppins-bold', sans-serif;
-    font-size: 21px;
-    line-height: 29px;
-    padding-top: 2.4%;
+    font-size: 28px;
+    line-height: 38px;
+    padding-top: 15px;
 `
 
 const NewsLink = styled.div`
-    font-size: 13.5px;
-    padding-top: 5.1%;
+    font-size: 18px;
+    padding-top: 29px;
 
     a {
       color: #000;
@@ -99,14 +118,24 @@ const NewsLink = styled.div`
 
 const NewsContainer = styled.div`
     position: relative;
-    height: 83vh;
-    margin: 4.3vw auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 62.56vh;
+    margin: 99px auto;
 
     h1 {
       text-align: center;
       padding: 48px 0 0 1px;
-      font-size: 49px;
+      font-size: 65px;
       font-family: 'Poppins-bold', sans-serif;
+    }
+
+    @media (max-width: 1170px) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: -60px;
     }
   `
 
@@ -114,6 +143,11 @@ const NewsCard = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
-  margin: 5.8vw 3.4vw;
-  padding-left: 5.7vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 104px;
+
+  @media (max-width: 1170px) {
+    margin-top: 30px;
+  }
 `
