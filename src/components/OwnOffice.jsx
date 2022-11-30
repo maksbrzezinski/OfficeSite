@@ -9,9 +9,8 @@ const Amenities = () => {
         <StaticImage src="../images/Carousel1.jpeg" alt="Own Office Picture" />
       </OOBg>
       <TextWrapper>
-        <p>Lorem ipsum<br />vs własne biuro
-          <div /> 
-        </p>
+        <p>Lorem ipsum<br />vs własne biuro</p>
+        <div /> 
       </TextWrapper>
 
       <LinesWrapper> 
@@ -49,58 +48,87 @@ const OOContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 78px;
-    // min-height: 62.7vh;
     min-height: 643px;
     width: 100vw;
 
     Img {
       height: 100%;
-      width: 100vw;
-      margin-left: 17.45%;
+      min-width: 100%;
+      margin-left: 17.3%;
       z-index: -2;
     }
 
     .linesStyles {
       position: relative;
-      height: 110px;
-      width: 110px;
+      max-height: 145px;
+      max-width: 145px;
     }
 
     .decorationLines {
       background-color: #000;
-      height: 7px;
+      height: 9px;
+      width: 145px;
     }
 
     .decorationLines ~ .decorationLines {
-      margin-top: 5.85px;
+      margin-top: 8px;
     }
-
-    /* .vertical ~ .vertical {
-      margin-top: 5.7px;
-    } */
 
     @media (max-width: 1300px) {
       height: auto;
       margin-top: 25%;
       padding-bottom: 15%;
     }
+
+    @media (max-width: 1200px) {
+      Img {
+        margin-left: 4%;
+      }
+
+      .linesStyles {
+        max-height: 105px;
+        max-width: 105px;  
+      }
+  
+      .decorationLines {
+        height: 7px;
+        width: 105px;     
+      }
+  
+      .decorationLines ~ .decorationLines {
+        margin-top: 5.3px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 100px; 
+    }
 `
 const OOBg = styled.div`
     position: absolute;
-    display: flex;
-    width: auto;
+    display: grid;
+    min-width: 100%;
     height: 100%;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      display: flex;
+      position: relative;
+      margin-left: 4%;
+      margin-right: 4%;
+    }
 `
 
 const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    position: relative;
     background-color: #fff;
-    max-height: 448px;
+    min-height: 448px;
     max-width: 815px;
     padding-left: 175px;
-    // padding: 0 10px 8px 0;
 
     p {
       position: relative;
@@ -109,26 +137,60 @@ const TextWrapper = styled.div`
       font-size: 65px;
       line-height: 1.16;
       margin-top: 220px;
-      // margin: 35% 5% 5% 0;
+
+    }
+    div {
+      position: absolute;
+      background-color: #000; 
+      width: 610px; 
+      height: 20px; 
+      margin-top: 540px;
+      z-index: 5;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 520px;
+      min-height: 350px;
+      padding-left: 7%;
+      padding-right: 7%;
+
+      p {
+        font-size: 48px;
+      }
 
       div {
-        position: relative;
-        background-color: #000; 
-        width: 610px; 
-        height: 20px; 
-        margin-top: 170px;
-        z-index: 5;
+        width: 380px;
+        height: 15px;
+        margin-top: 370px;
       }
     }
 
+    @media (max-width: 768px) {
+      min-height: 240px;
+      display: flex;
+      margin-right: auto;
+
+      p {
+        margin-top: 0;
+      }
+      div {
+        margin-top: 140px;
+        width: 150px;
+        height: 10px;
+      }
+    }
 `
 
 const LinesWrapper = styled.div`
   position: absolute;
   display: flex;
   flex-direction: row;
-  top: -11.4%;
-  right: 9%;
+  top: -11.2%;
+  right: 9.8%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const LinesHorizontal = styled.div`
