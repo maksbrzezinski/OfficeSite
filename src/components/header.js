@@ -1,9 +1,6 @@
 import * as React from "react"
 import styled from 'styled-components'
 import { menuData } from '../data/MenuData'
-import { Link } from "gatsby"
-import { SiInstagram } from "react-icons/si"
-import { FaFacebookF } from "react-icons/fa"
 
 const Header = () => {
   return (
@@ -21,10 +18,10 @@ const Header = () => {
           </NavMenu>
         </div>
         <div className="social">
-          <a to="/Facebook" className="socialIcon">
+          <a href="/" className="socialIcon">
             <i className="fa-brands fa-facebook-f"></i>
           </a>
-          <a to="/Instagram" className="socialIcon">
+          <a href="/" className="socialIcon">
             <i className="fa-brands fa-instagram"></i>
           </a>
         </div>

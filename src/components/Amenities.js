@@ -5,7 +5,6 @@ import {BiCoffee} from "react-icons/bi"
 import {GiBookshelf, GiDesk} from "react-icons/gi"
 import {GrPersonalComputer} from "react-icons/gr"
 import {RiTeamFill} from "react-icons/ri"
-import { Button } from "./Button"
 
 const Amenitites = () => {
   return (

@@ -6,7 +6,7 @@ import Amenities from "../components/Amenities"
 import OwnOffice from "../components/OwnOffice"
 import News from "../components/News"
 import Gallery from "../components/Gallery"
-import Seo from "../components/SEO"
+import Seo from "../components/Seo"
 import {Helmet} from 'react-helmet'
 
 const IndexPage = () => (

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Carousel } from 'react-bootstrap'
 import slide01 from "../images/Office1.jpeg"
 import slide02 from "../images/Office4.jpeg"
 import slide03 from "../images/Office3.jpeg"
@@ -15,13 +14,13 @@ return (
         <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src={slide01} className="d-block w-100 bg-secondary"  alt="photo 1" />
+                    <img src={slide01} className="d-block w-100 bg-secondary"  alt="Office 1" />
                 </div>
                 <div className="carousel-item">
-                    <img src={slide02} className="d-block w-100 bg-secondary" alt="photo 2" />
+                    <img src={slide02} className="d-block w-100 bg-secondary" alt="Office 2" />
                 </div>
                 <div className="carousel-item">
-                    <img src={slide03} className="d-block w-100 bg-secondary" alt="photo 3" />
+                    <img src={slide03} className="d-block w-100 bg-secondary" alt="Office 3" />
                 </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">

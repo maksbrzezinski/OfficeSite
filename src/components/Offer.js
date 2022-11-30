@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { AiOutlineArrowRight } from 'react-icons/ai'
-import { Link } from 'gatsby'
-import { photo1 } from '../images/Work1.jpeg'
 
 const Offer = () => {
     
