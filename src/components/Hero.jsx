@@ -132,18 +132,24 @@ const HeroContainer = styled.div`
             }
         }
     }
+
+    @media (max-width: 576px) {
+        min-height: 1200px;
+        padding-bottom: 130px;
+    }
 `
 
 const HeroBG = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     overflow: hidden;
 
     img {
         min-height: 953px;
+        height: 100%;
         min-width: 100%;
         object-fit: cover;
     }
@@ -200,7 +206,7 @@ const HeroBG = styled.div`
     }
     @media (max-width: 991px) {
         img {
-            min-height: 1100px;
+            min-height: 1200px;
         }
         .carousel-control-next {
             display: none;
@@ -240,6 +246,12 @@ const HeroText = styled.div `
             font-size: 24px;
         }
     }
+
+    @media (max-width: 576px) {
+        h1 {
+            margin-top: 30px;
+        }
+    }
 `
 
 const HeroForm = styled.div`
@@ -247,7 +259,6 @@ const HeroForm = styled.div`
     position: relative;
     flex-direction: row;
     background-color: #fff;
-    max-width: 449px;
     min-width: 450px;
     height: auto;
     min-height: 638px;
@@ -352,6 +363,10 @@ const HeroForm = styled.div`
 
     @media (max-width: 991px) {
         margin-left: 8%;
+    }
+
+    @media (max-width: 576px) {
+        min-width: 380px;
     }
 `
 

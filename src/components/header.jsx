@@ -107,6 +107,13 @@ const Navigation = styled.div`
       margin-right: 30px;
     }
   }
+
+  @media (max-width: 576px) {
+    .social {
+      // margin-right: 70px;
+      margin-left: -45px;
+    }
+  }
 `
 
 const NavMenu = styled.div`
@@ -175,8 +182,13 @@ const NavMenu = styled.div`
     width: 150px;
 
     .navBar {
-      display: block;
+      display: flex;
     }
+  }
+
+  @media (max-width: 576px) {
+    margin-right: 40px;
+    margin-left: -25px;
   }
 `
 
