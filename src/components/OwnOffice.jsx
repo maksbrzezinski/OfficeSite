@@ -166,13 +166,14 @@ const TextWrapper = styled.div`
     }
 
     @media (max-width: 768px) {
-      min-height: 240px;
+      min-height: 200px;
       display: flex;
       margin-right: auto;
 
       p {
         margin-top: 0;
       }
+
       div {
         margin-top: 140px;
         width: 150px;

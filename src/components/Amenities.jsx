@@ -7,59 +7,59 @@ import {GrPersonalComputer} from "react-icons/gr"
 import {RiTeamFill} from "react-icons/ri"
 
 const Amenitites = () => {
-  return (
-    <AmenitiesContainer>
-        <div class="row upper d-flex flex-wrap justify-content-center my-5 my-lg-0">
-            <div className="title-amenities">
-                <p>Lorem<br /> ipsum<br /> dolor sit<br /> amet,<br /> conse</p>
-                <span />
-            </div>
-            <div className="square">
-                <AiOutlineWallet class="icon"/>
-                <div className="s1 yellow-square"/>
-                <p>Lorem ipsum</p>
-            </div>
-            <div className="square">
-                <BiCoffee class="icon"/>
-                <div className="s2 yellow-square"/>
-                <p>Lorem ipsum<br /> dolor sit amet conse</p>
-            </div>
-            <div className="square">
-                <GiBookshelf class="icon"/>
-                <div className="s3 yellow-square"/>
-                <p>Lorem ipsum<br /> dolor sit amet,</p>
-            </div>
-            
-            <div className="square lower">
-                <GrPersonalComputer className="icon"/>
-                <div className="s4 yellow-square"/>
-                <p>Lorem ipsum<br /> dolor sit amet,</p>
-            </div>
-            <div className="square lower">
-                <GiDesk class="icon"/>
-                <div className="s5 yellow-square"/>
-                <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum lorem</p>
-            </div>
-            <div className="square lower">
-                <AiOutlineWifi class="icon"/>
-                <div className="s6 yellow-square"/>
-                <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum lorem</p>
-            </div>
-            <div className="square lower">
-                <RiTeamFill class="icon"/>
-                <div className="s7 yellow-square"/>
-                <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum</p>
-            </div>
+return (
+<AmenitiesContainer>
+    <div class="row upper d-flex flex-wrap justify-content-center my-5 my-lg-0">
+        <div className="title-amenities">
+            <p>Lorem<br /> ipsum<br /> dolor sit<br /> amet,<br /> conse</p>
+            <span />
         </div>
+        <div className="square">
+            <AiOutlineWallet class="icon"/>
+            <div className="s1 yellow-square"/>
+            <p>Lorem ipsum</p>
+        </div>
+        <div className="square">
+            <BiCoffee class="icon"/>
+            <div className="s2 yellow-square"/>
+            <p>Lorem ipsum<br /> dolor sit amet conse</p>
+        </div>
+        <div className="square">
+            <GiBookshelf class="icon"/>
+            <div className="s3 yellow-square"/>
+            <p>Lorem ipsum<br /> dolor sit amet,</p>
+        </div>
+        
+        <div className="square lower">
+            <GrPersonalComputer className="icon"/>
+            <div className="s4 yellow-square"/>
+            <p>Lorem ipsum<br /> dolor sit amet,</p>
+        </div>
+        <div className="square lower">
+            <GiDesk class="icon"/>
+            <div className="s5 yellow-square"/>
+            <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum lorem</p>
+        </div>
+        <div className="square lower">
+            <AiOutlineWifi class="icon"/>
+            <div className="s6 yellow-square"/>
+            <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum lorem</p>
+        </div>
+        <div className="square lower">
+            <RiTeamFill class="icon"/>
+            <div className="s7 yellow-square"/>
+            <p>Lorem ipsum dolor <br />sit amet, conse <br />lorem ipsum</p>
+        </div>
+    </div>
 
-        <div class="d-flex w-100">
-            <button type="button" primary="True" to="/Oferta" id="Button" class="btn">
-                DOWIEDZ SIĘ WIĘCEJ 
-                <AiOutlineArrowRight class="btn-arrow d-flex flex-row-reverse"/>
-            </button>
-        </div>
-    </AmenitiesContainer>
-    )
+    <div class="d-flex w-100">
+        <button type="button" primary="True" to="/Oferta" id="Button" class="btn">
+            DOWIEDZ SIĘ WIĘCEJ 
+            <AiOutlineArrowRight class="btn-arrow d-flex flex-row-reverse"/>
+        </button>
+    </div>
+</AmenitiesContainer>
+)
 }
 
 export default Amenitites

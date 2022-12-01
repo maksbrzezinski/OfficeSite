@@ -111,24 +111,6 @@ const HeroContainer = styled.div`
         }
     }
 
-    // .carousel-control-prev, .carousel-control-next {
-    //     position: absolute;
-    //     height: 90px;
-    //     width: 116px;
-    //     top: 83.5vh;
-    //     background-color: #000;
-    //     opacity: 1;
-
-    //     @media (max-width: 768px) {
-    //         display: none;
-    //     }
-    // }
-
-    // .carousel-control-next {
-    //     margin-right: 84.1%;
-    // }
-
-
     @media (max-width: 991px) {
         min-height: 1100px;
 
@@ -154,17 +136,11 @@ const HeroContainer = styled.div`
             }
         }
     }
-    // @media (max-width: 580px) {
-    //     .custom-container {
-    //         .custom-row {
-    //             margin-top: 60px;
-    //         }
-    // }
 `
 
 const HeroBG = styled.div`
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
@@ -183,7 +159,6 @@ const HeroBG = styled.div`
         position: absolute;
         height: 117px;
         width: 153px;
-        // top: 83.5vh;
         top: 835px;
         background-color: #000;
         font-size: 38px;
@@ -237,14 +212,12 @@ const HeroText = styled.div `
     margin-bottom: 38px;
 
     h1 {
-        // font-size: clamp(16px, 3.35vw, 65px);
         font-size: 65px;
         font-family: "Poppins-bold", sans-serif;
         color: #fff;
     }
 
     p {
-        // font-size: clamp(0.5rem, 2.5vw, 48px);
         font-size: 48px;
         margin-top: 9px;
         color: #fff;
@@ -278,15 +251,12 @@ const HeroForm = styled.div`
         margin-bottom: 5px;
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
-        // font-size: clamp(1.2rem, 1.49vw, 28px); 
         font-size: 28px; 
-        // margin-left: -1px;
         line-height: 35px;
     }
 
     p {
-    // font-size: clamp(13.5px, 1vw, 18px);
-    font-size: 18px;
+        font-size: 18px;
     }
 
     p:first-of-type {
@@ -308,7 +278,6 @@ const HeroForm = styled.div`
         line-height: 50px;
         margin-bottom: 20px;
         padding-left: 5%;
-        // font-size: clamp(13.5px, 0.9vw, 18px);
         font-size: 18px;
     }
 
@@ -325,7 +294,6 @@ const HeroForm = styled.div`
         margin-top: -2px;
 
         p {
-            // font-size: clamp(7px, 0.52vw, 10px);
             font-family: 'Poppins', sans-serif;
             font-size: 9.9px;
             font-weight: 500;
@@ -343,9 +311,8 @@ const HeroForm = styled.div`
         background-color: #000;
         color: #fff;
         font-family: "Poppins", sans-serif;
-        // font-size: clamp(12px, 0.9vw, 17.5px);
-        font-size: 18px;
         font-weight: 600;
+        font-size: 18px;
         letter-spacing: 4px;
         justify-content: center;
         height: 52px;
