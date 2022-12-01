@@ -8,7 +8,6 @@ const Header = () => {
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen)
   }
-  
   return (
 
     <Navigation>
@@ -22,16 +21,16 @@ const Header = () => {
               </NavLink>
             )}
 
-<nav className="navBar">
-  <button onClick={handleToggle} class="btn btn-outline-light"><i className="fa-solid fa-bars"></i></button>
-    <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-      <li>Poznaj Przestrzeń</li>
-      <li>Oferta</li>
-      <li>Lokalizacja</li>
-      <li>Własne Biuro</li>
-      <li>Kontakt</li>
-    </ul>
-  </nav>
+          <nav className="navBar">
+            <button onClick={handleToggle} type="button" class="btn btn-outline-light"><i className="fa-solid fa-bars"></i></button>
+            <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+              <li>Poznaj Przestrzeń</li>
+              <li>Oferta</li>
+              <li>Lokalizacja</li>
+              <li>Własne Biuro</li>
+              <li>Kontakt</li>
+            </ul>
+          </nav>
           </NavMenu>
         </div>
         <div className="social">
@@ -121,11 +120,11 @@ const NavMenu = styled.div`
 
   .navBar {
     position: relative;
+    display: none;
   }
   
   .navBar button {
     position: relative;
-    // left: 40px;
     left: 50%;
     right: 50%;
     z-index: 10;
@@ -175,9 +174,7 @@ const NavMenu = styled.div`
   @media (max-width: 768px) {
     width: 150px;
 
-    .dropdown {
-      height: 30px;
-      width: 60px;
+    .navBar {
       display: block;
     }
   }

@@ -99,6 +99,11 @@ padding-right: 8.4%;
     align-items: center;
     display: flex;
     font-size: 38px;
+    transition: 0.3s;
+}
+
+.arrow-container:hover {
+    background-color: #ffcc38;
 }
 
 #con-1, #con-2, #con-3, #con-4 {
@@ -106,12 +111,18 @@ padding-right: 8.4%;
     margin: 15px;
     padding: 0;
     overflow: hidden;
+
     .photo1, .photo2, .photo3, .photo4 {
         position: absolute;
         z-index: -1;
         width: 100%;
         height: 100%;
+        transition: transform 0.5s;
     }
+}
+
+#con-1:hover > .photo1, #con-2:hover > .photo2, #con-3:hover > .photo3, #con-4:hover > .photo4 {
+    transform: scale(1.2);
 }
 
 .text-container-1, .text-container-2, .text-container-3, .text-container-4 {

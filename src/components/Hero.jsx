@@ -321,10 +321,15 @@ const HeroForm = styled.div`
         width: 100%;
         border: none;
         margin-top: 14px;
+        transition: 0.3s;
 
         span {
             padding-left: 8px;
         }
+    }
+
+    button:hover {
+        background-color: #ffcc38;
     }
 
     @media (max-width: 1300px) {

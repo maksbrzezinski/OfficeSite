@@ -165,7 +165,7 @@ const Element1 = styled.div`
   margin: 0 14px 0 0;
 
   img {
-    height: 87.2vh;
+    min-height: 100%;
     width: 32.3vw;
   }
 `
@@ -227,7 +227,7 @@ const Element5 = styled.div`
   width: 25vw;
 
   img {
-    height: 60vh;
+    height: 100%;
     width: 100%;
   }
 `

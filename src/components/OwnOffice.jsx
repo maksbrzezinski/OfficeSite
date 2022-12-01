@@ -6,7 +6,7 @@ const Amenities = () => {
   return (
     <OOContainer>
       <OOBg>
-        <StaticImage src="../images/Carousel1.jpeg" alt="Own Office Picture" />
+        <StaticImage src="../images/Carousel3.jpeg" alt="Own Office Picture" />
       </OOBg>
       <TextWrapper>
         <p>Lorem ipsum<br />vs własne biuro</p>
@@ -112,6 +112,11 @@ const OOBg = styled.div`
     min-width: 100%;
     height: 100%;
     z-index: -1;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
 
     @media (max-width: 768px) {
       display: flex;
