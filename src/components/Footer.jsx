@@ -25,7 +25,7 @@ const Footer = () => {
             </ul>
         </LinksContainer>
 
-        <p className="reproduced">Proudly (re)designed by Maks Brzeziński</p> 
+        <p className="reproduced">Proudly (re)designed by Maks Brzeziński</p>
     </FooterContainer>
   )
 }

@@ -1,8 +1,14 @@
 import * as React from "react"
+import { useState } from "react"
 import styled from 'styled-components'
 import { menuData } from '../data/MenuData'
 
 const Header = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  }
+  
   return (
 
     <Navigation>
@@ -15,6 +21,17 @@ const Header = () => {
                 {item.title}
               </NavLink>
             )}
+
+<nav className="navBar">
+  <button onClick={handleToggle} class="btn btn-outline-light"><i className="fa-solid fa-bars"></i></button>
+    <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+      <li>Poznaj Przestrzeń</li>
+      <li>Oferta</li>
+      <li>Lokalizacja</li>
+      <li>Własne Biuro</li>
+      <li>Kontakt</li>
+    </ul>
+  </nav>
           </NavMenu>
         </div>
         <div className="social">
@@ -97,20 +114,76 @@ const NavMenu = styled.div`
   font-size: 15.5px;
   color: #fff;
   align-items: center;
-  // width: 775px;
   width: 51.3vw;
   justify-content: space-around;
-  // margin-left: 148px;
   margin-left: 11.9%;
   margin-top: -2px;
 
+  .navBar {
+    position: relative;
+  }
+  
+  .navBar button {
+    position: relative;
+    // left: 40px;
+    left: 50%;
+    right: 50%;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .menuNav {
+    overflow-x: scroll;
+    list-style: none;
+    position: fixed;
+    background-color: rgba(255,255,255,0.8);
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 0;
+    width: 0;
+    color: #000;
+    overflow: hidden;
+    z-index: 9;
+    transition: 0.4s;
+  }
+  
+  .menuNav.showMenu {
+    min-width: 100vw;
+    height: 300px;
+    margin-left: -200px;
+  }
+  
+  button {
+    display: block;
+    padding: 6px 16px;
+    text-decoration: none;
+    color: #000;
+
+    i {
+      font-size: 24px;
+    }
+  }
+  
+  .menuNav li {
+    padding: 5px;
+  }
+  .menuNav li:first-child {
+    margin-top: 7rem;
+  }
+
   @media (max-width: 768px) {
     width: 150px;
+
+    .dropdown {
+      height: 30px;
+      width: 60px;
+      display: block;
+    }
   }
 `
 
 const NavLink = styled.div`
-  // align-items: center;
   justify-content: space-around;
   padding-left: 10px;
 
@@ -118,79 +191,3 @@ const NavLink = styled.div`
     display: none;
   }
 `
-
-// const Nav = styled.div`
-//   position: relative;
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 0.5rem calc((100vw - 1200px) / 2);
-//   height: 80px;
-//   background: transparent;
-//   z-index: 2; 
-
-//   h1 {
-//     position: relative;
-//     top: 28px;
-//     left: 1%;
-//     width: 8vw;
-//     height: 8vw;
-//     font-family: "Poppins-bold", sans-serif;
-//     font-size: clamp(28px, 2.5vw, 3rem);
-//     cursor: pointer;
-//   }
-
-//   .Social {
-//     margin-right: 13px;
-
-//   @media screen and (max-width: 768px) {
-//     display: none;
-//   }
-//   }
-
-//   .socialIcon {
-//     height: 20.5px;
-//     width: 20.5px;
-//     margin-top: 40px;
-//     padding: 4px;
-//     font-size: 17px;
-//     text-align: center;
-//     color: #000;
-//     background-color: #fff;
-
-//     @media screen and (max-width: 768px) {
-//       display: none;
-//     }
-//     }
-
-//     .FB {
-//       margin-right: 17px;
-//     }
-// `
-
-// const NavMenu = styled.div`
-//   position: relative;
-//   display: flex;
-//   justify-content: space-between;
-//   width: 40.2vw;
-//   margin-left: -14%;
-//   top: 20px;
-  
-//   @media screen and (max-width: 1100px) {
-//     display: none;
-//   }
-// `
-
-// const NavLink = styled(Link)`
-//   display: flex;
-//   height: 100%;
-//   font-size: 12px; 
-//   letter-spacing: -0.2px;
-//   align-items: center;
-//   text-decoration: none;
-//   color: #000;
-//   cursor: pointer;
-
-//   @media screen and (max-width: 768px) {
-//     display: none;
-//   }
-// `
