@@ -92,10 +92,6 @@ const HeroContainer = styled.div`
         padding-right: 8.4%;
     }
 
-    .form {
-        padding-right: 0;
-    }
-
     .headerLayout {
         position: relative;
         display: flex;
@@ -171,6 +167,10 @@ const HeroBG = styled.div`
 
     .carousel-control-next {
         margin-right: 84.2%;
+
+        .fa-arrow-right {
+            padding-left: 15px;
+        }
     }
 
     a {
@@ -213,7 +213,8 @@ const HeroText = styled.div `
 
     h1 {
         font-size: 65px;
-        font-family: "Poppins-bold", sans-serif;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
         color: #fff;
     }
 
@@ -243,12 +244,12 @@ const HeroForm = styled.div`
     min-width: 345px;
     height: auto;
     min-height: 638px;
-    padding: 33px;
-    margin-left: 9%;
+    padding: 34px;
+    padding-right: 32px;
+    margin-left: 28%;
 
     h2, h3 {
-        margin-top: -2px;
-        margin-bottom: 5px;
+        margin-top: -5px;
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
         font-size: 28px; 
@@ -318,7 +319,7 @@ const HeroForm = styled.div`
         height: 52px;
         width: 100%;
         border: none;
-        margin-top: 15px;
+        margin-top: 14px;
 
         span {
             padding-left: 8px;

@@ -8,12 +8,14 @@ const Footer = () => {
             <h1>LOGO</h1>
             <p>ul. Towarowa 5/6 <br />31-000 Kraków</p>
             <p>+48 999 999 999 <br />email@email.com</p>
-            <p>Polityka prywatności</p>
         </CompanyDetails>
+
+        <p className="policy">Polityka prywatności</p>
+
         <LinksContainer>
             <ul>
                 <li>Strona główna</li>
-                <li class="lower">Poznaj przestrzeń</li>
+                <li>Poznaj przestrzeń</li>
                 <li>Oferta</li>
             </ul>
             <ul>
@@ -22,7 +24,8 @@ const Footer = () => {
                 <li>Kontakt</li>
             </ul>
         </LinksContainer>
-            <p className="reproduced">Reproduced by Maks Brzeziński</p> 
+
+        <p className="reproduced">Proudly (re)designed by Maks Brzeziński</p> 
     </FooterContainer>
   )
 }
@@ -30,28 +33,67 @@ const Footer = () => {
 export default Footer
 
 const FooterContainer = styled.div`
-    padding: 5vw 11.8vw;
-    display: flex;
     position: relative;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    margin: 8rem auto 0;
-    height: 410px;
-    color: #fff;
+    min-height: 547px;
+    padding: 5% 9% 0;
+    margin-top: 170px;
     background-color: #000;
+    color: #fff;
 
-    .reproduced {
+    .policy, .reproduced {
         position: absolute;
-        font-size: 9px;
+        font-size: 12px;
+        font-weight: 300;
         width: 30vw;
-        bottom: 4%;
-        right: -10.5%;
+        bottom: 29px;
+        left: 80.5%;
+    }
+
+    .policy {
+        left: 9.1%;
+        font-weight: 400;
+    }
+
+    @media (max-width: 1300px) {
+        padding-left: 7%;
+        padding-right: 7%;
+
+        .policy {
+            left: 4%;
+        }
+
+        .reproduced {
+            left: 72%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .reproduced {
+            left: 65%;
+        }
     }
 
     @media (max-width: 768px) {
-        .reproduced {
-            right: 2%;
+        flex-direction: column;
+        align-items: start;
+
+        .policy {
+            margin-top: 35px;
+        }
+
+        .policy, .reproduced {
+            position: relative;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            justify-content: center; 
+            text-align: center;
+            order: 2;
         }
     }
 `
@@ -61,41 +103,35 @@ const CompanyDetails = styled.div`
     display: flex;
     flex-direction: column;
     width: 18vw;
-    height: 100%;
-    margin-top: -1.1%;
-    margin-left: -3.75%;
-    
-    @media (max-width: 768px) {
-        width: 50vw;
-    }
+    margin-top: -200px;
 
-    h1, p ~ p {
-        font-family: "Poppins-bold", sans-serif; 
+    h1, p:last-of-type {
+        font-family: "Poppins", sans-serif; 
+        font-weight: 700;
     }
 
     h1 {
-        font-size: 49px;
-        margin-bottom: 2.15rem;
+        font-size: 65px;
+        margin-bottom: 46px;
     }
 
     p {
-        font-size: 12px;
+        font-size: 16px;
         margin-left: 3px;
-        line-height: 19px;
-    }
-
-    p ~ p {
-        margin-top: 0.3rem;
+        line-height: 26px;
     }
 
     p:last-of-type {
-        font-family: "Poppins", sans-serif;
-        font-size: 9px;
-        padding-top: 61%;
-
-        @media (max-width: 768px) {
-            padding-top: 11vh;
+        margin-top: 9px;
     }
+
+    @media (max-width: 768px) {
+        margin-top: 0;
+        width: 50vw;
+
+        h1 {
+            margin-bottom: 30px;
+        }
     }
 `
 
@@ -103,10 +139,9 @@ const LinksContainer = styled.div`
     position: relative;
     display: flex; 
     flex-direction: row;
-    height: 100%;
     width: 100vw;
-    margin-left: 28.5%;
-    top: 1px;
+    margin-left: 428px;
+    margin-top: -100px;
     text-align: left;
     align-items: center;
 
@@ -115,18 +150,38 @@ const LinksContainer = styled.div`
     }
 
     ul {
-        list-style-type: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 40px;
         width: 16.6vw;
-        line-height: 30px;
-        font-size: 12px;
+        list-style-type: none;
+    }
+
+    @media (max-width: 1300px) {
+        margin-left: 250px;
+
+        ul {
+            width: 25vw;
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-left: 150px;
+
+        ul {
+            width: 30vw;
+        }
+    }
 
     @media (max-width: 768px) {
-        width: 50vw;
-        margin-left: 1%;
-    }
-    }
+        flex-direction: column;
+        margin-left: -48px;
+        margin-top: 40px;
+        align-items: start;
 
-    .lower {
-        margin-top: 1px;
+        ul {
+            width: 50vw;
+            margin-left: 1%;
+        }
     }
 `
