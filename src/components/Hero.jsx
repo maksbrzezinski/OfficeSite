@@ -160,10 +160,16 @@ const HeroBG = styled.div`
         background-color: #000;
         font-size: 38px;
         opacity: 1;
+        transition: 0.3s;
 
         @media (max-width: 768px) {
             display: none;
         }
+    }
+
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+        background-color: #fff;
+        color: #000;
     }
 
     .carousel-control-next {
