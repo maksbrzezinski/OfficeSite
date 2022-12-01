@@ -98,6 +98,10 @@ const NewsInfo = styled.div`
 const Date = styled.div`
     font-size: 18px;
     padding-top: 3.6%;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
 `
 
 const Title = styled.div`
@@ -105,6 +109,10 @@ const Title = styled.div`
     font-size: 28px;
     line-height: 38px;
     padding-top: 15px;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
 `
 
 const NewsLink = styled.div`
@@ -113,6 +121,10 @@ const NewsLink = styled.div`
 
     a {
       color: #000;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
     }
 `
 
@@ -136,6 +148,10 @@ const NewsContainer = styled.div`
 
     @media (max-width: 768px) {
       margin-top: -60px;
+
+      h1 {
+        font-size: 42px;
+      }
     }
   `
 

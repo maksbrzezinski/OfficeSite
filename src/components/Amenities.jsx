@@ -52,7 +52,7 @@ return (
         </div>
     </div>
 
-    <div class="d-flex w-100">
+    <div class="d-flex w-100 pe-5">
         <button type="button" primary="True" to="/Oferta" id="Button" class="btn">
             DOWIEDZ SIĘ WIĘCEJ 
             <AiOutlineArrowRight class="btn-arrow d-flex flex-row-reverse"/>
@@ -223,5 +223,10 @@ flex-wrap: wrap;
             }
         }
 
+    @media (max-width: 768px) {
+        .square {
+            margin-top: 30px;
+        }
+    }
     }
 `

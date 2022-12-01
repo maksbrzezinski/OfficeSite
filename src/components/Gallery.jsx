@@ -130,32 +130,31 @@ const GalleryContainer = styled.div`
       .gallery-mobile {
         display: flex;
         flex-direction: column;
-        // align-items: center;
 
         .show-me {
           margin-top: 0;
           margin-bottom: 40px;
-          // marigin-right: 80%;
           margin-left: 5%;
 
           div {
             margin-top: 20px;
             height: 10px;
-            width: 150px;
+            width: 80px;
           }
         }
 
-        .carousel .slide {
-          height: 500px;
+        #galleryBottom {
+          min-height: 380px;
         }
 
         .carousel-control-prev, .carousel-control-next {
-          height: 90px;
-          width: 90px;
+          height: 75px;
+          width: 75px;
         }
 
         img {
-          min-height: 100%;
+          object-fit: cover;
+          min-height: 380px;
         }
       }
     }
@@ -216,8 +215,9 @@ const Element4 = styled.div`
     }
 
     @media (max-width: 768px) {
-      margin: 26px 0 0 -15vw;
-      width: 30vw; 
+      h1 {
+        font-size: 42px;
+      }
     }
 `
 
