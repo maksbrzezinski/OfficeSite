@@ -145,6 +145,7 @@ const HeroBG = styled.div`
     img {
         min-height: 953px;
         min-width: 100%;
+        object-fit: cover;
     }
 
     .carousel .slide {
@@ -241,7 +242,7 @@ const HeroForm = styled.div`
     flex-direction: row;
     background-color: #fff;
     max-width: 449px;
-    min-width: 345px;
+    min-width: 450px;
     height: auto;
     min-height: 638px;
     padding: 34px;
@@ -324,6 +325,22 @@ const HeroForm = styled.div`
         span {
             padding-left: 8px;
         }
+    }
+
+    @media (max-width: 1300px) {
+        margin-left: 0%;
+    }
+
+    @media (max-width: 1200px) {
+        margin-left: -20%;
+    }
+
+    @media (max-width: 1120px) {
+        margin-left: -35%;
+    }
+
+    @media (max-width: 991px) {
+        margin-left: 8%;
     }
 `
 
