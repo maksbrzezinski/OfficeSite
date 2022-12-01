@@ -10,10 +10,15 @@ const Amenitites = () => {
 return (
 <AmenitiesContainer>
     <div class="row upper d-flex flex-wrap justify-content-center my-5 my-lg-0">
-        <div className="title-amenities">
+        <div className="title-amenities-desktop">
             <p>Lorem<br /> ipsum<br /> dolor sit<br /> amet,<br /> conse</p>
             <span />
         </div>
+        <div className="title-amenities-mobile">
+            <p>Lorem ipsum dolor sit amet, conse</p>
+            <span />
+        </div>
+
         <div className="square">
             <AiOutlineWallet class="icon"/>
             <div className="s1 yellow-square"/>
@@ -72,7 +77,7 @@ min-height: 71vh;
 display: flex;
 flex-wrap: wrap;
 
-    .title-amenities {
+    .title-amenities-desktop {
         padding: 0 0 0 79px;
         margin-top: -132px;
 
@@ -92,7 +97,26 @@ flex-wrap: wrap;
         }
     }
 
-    .title-amenities, .square {
+    .title-amenities-mobile {
+        display: none;
+
+        p:first-of-type {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            }
+
+        span {
+            height: 10px;
+            width: 130px;
+            background-color: #000;
+            display: block;
+            margin-top: 47px;
+        }
+    }
+
+    .title-amenities-desktop, .square {
         flex: 1;
         flex-basis: 25%;
     }
@@ -168,18 +192,8 @@ flex-wrap: wrap;
         margin-top: 2px;
     }
 
-    .upper .square {
+    .upper .square, .lower {
         padding: 0px 0 0 80px;
-        // max-height: 450px;
-    }
-
-    .lower {
-        padding: 0px 0 0 80px;
-        // margin-top: 3px;
-    }
-
-    .lower .square:first-of-type {
-        // padding-left: 59px;
     }
 
     .btn {
@@ -213,7 +227,6 @@ flex-wrap: wrap;
         .upper, .lower {
             .square {
                 flex-basis: 33%;
-                // max-width: 33%;
     
                 .s1, .s2, .s3, .s4, .s5, .s6, .s7  {
                     top: 10%;
@@ -224,9 +237,36 @@ flex-wrap: wrap;
         }
 
     @media (max-width: 768px) {
-        .square {
-            margin-top: 30px;
+        .title-amenities-desktop {
+            display: none;
         }
+
+        .title-amenities-mobile {
+            display: block;
+            margin-top: -100px;
+            margin-bottom: 70px;
+        }
+
+        .square {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 100%;
+            min-height: 100px;
+            margin-left: -60px;
+
+            p {
+                margin-left: 40px;
+            }
+        }
+
+        .s1, .s2, .s3, .s4, .s5, .s6, .s7  {
+            top: 10%;
+            left: 15%;
+            transform: translate (-10%, -15%);
+        }
+
+        .upper .square {
+            flex-basis: 100%;
     }
     }
 `
