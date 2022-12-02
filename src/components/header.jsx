@@ -110,10 +110,15 @@ const Navigation = styled.div`
 
   @media (max-width: 576px) {
     .social {
-      // margin-right: 70px;
       margin-left: -45px;
     }
   }
+
+  @media (max-width: 410px) {
+    .social {
+      margin-left: -33%;
+    }
+}
 `
 
 const NavMenu = styled.div`
@@ -190,6 +195,10 @@ const NavMenu = styled.div`
     margin-right: 40px;
     margin-left: -25px;
   }
+
+  @media (max-width: 410px) {
+      margin-left: -14%;
+}
 `
 
 const NavLink = styled.div`
