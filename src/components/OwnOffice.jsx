@@ -122,12 +122,14 @@ const OOBg = styled.div`
     @media (max-width: 768px) {
       display: flex;
       position: relative;
-      margin-left: 4%;
+      margin-left: 0%;
       margin-right: 4%;
+      min-width: 96%;
+      max-width: 96%;
     }
 
     @media (max-width: 576px) {
-      margin-left: 0%;
+      // margin-left: 0%;
     }
 `
 
@@ -171,7 +173,13 @@ const TextWrapper = styled.div`
       div {
         width: 380px;
         height: 15px;
-        margin-top: 370px;
+        margin-top: 450px;
+      }
+    }
+
+    @media (max-width: 968px) {
+      div {
+        margin-top: 400px;
       }
     }
 

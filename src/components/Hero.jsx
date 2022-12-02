@@ -350,6 +350,10 @@ const HeroForm = styled.div`
         background-color: #ffcc38;
     }
 
+    @media (max-width: 1400px) {
+        margin-left: 15%;
+    }
+
     @media (max-width: 1300px) {
         margin-left: 0%;
     }
@@ -362,7 +366,15 @@ const HeroForm = styled.div`
         margin-left: -35%;
     }
 
+    @media (max-width: 1050px) {
+        margin-left: -40%;
+    }
+
     @media (max-width: 991px) {
+        margin-left: 0%;
+    }
+
+    @media (max-width: 768px) {
         margin-left: 8%;
     }
 
