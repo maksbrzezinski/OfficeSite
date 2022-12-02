@@ -151,6 +151,8 @@ const NavMenu = styled.div`
     align-items: center;
     justify-content: center;
     top: 0;
+    left: 50%;
+    right: 0;
     height: 0;
     width: 0;
     color: #000;
@@ -177,7 +179,7 @@ const NavMenu = styled.div`
   }
   
   .menuNav li {
-    padding: 5px;
+    padding: 10px;
   }
   .menuNav li:first-child {
     margin-top: 7rem;
@@ -194,6 +196,10 @@ const NavMenu = styled.div`
   @media (max-width: 576px) {
     margin-right: 40px;
     margin-left: -25px;
+
+    .menuNav.showMenu {
+      margin-left: auto;
+    }
   }
 
   @media (max-width: 410px) {
