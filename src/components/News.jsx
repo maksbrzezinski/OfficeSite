@@ -89,7 +89,6 @@ const PhotoImg = styled(Img)`
 const NewsInfo = styled.div`
     display: flex;
     flex-direction: column;
-    // height: 45vh;
     width: 100%;
     padding: 2% 0;
     margin-top: 7px;
@@ -105,7 +104,8 @@ const Date = styled.div`
 `
 
 const Title = styled.div`
-    font-family: 'Poppins-bold', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     font-size: 28px;
     line-height: 38px;
     padding-top: 15px;
@@ -139,7 +139,8 @@ const NewsContainer = styled.div`
       text-align: center;
       padding: 48px 0 0 1px;
       font-size: 65px;
-      font-family: 'Poppins-bold', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
     }
 
     @media (max-width: 1170px) {
@@ -150,7 +151,7 @@ const NewsContainer = styled.div`
       margin-top: -60px;
 
       h1 {
-        font-size: 42px;
+        font-size: 36px;
       }
     }
   `

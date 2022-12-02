@@ -130,15 +130,20 @@ const GalleryContainer = styled.div`
       .gallery-mobile {
         display: flex;
         flex-direction: column;
+        margin-bottom: -80px;
 
         .show-me {
           margin-top: 0;
           margin-bottom: 40px;
           margin-left: 5%;
 
+          h1 {
+            font-size: 36px;
+          }
+
           div {
             margin-top: 20px;
-            height: 10px;
+            height: 8px;
             width: 80px;
           }
         }

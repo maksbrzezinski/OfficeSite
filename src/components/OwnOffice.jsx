@@ -103,7 +103,8 @@ const OOContainer = styled.div`
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column-reverse;
-      margin-top: 100px; 
+      margin-top: 50px; 
+      min-height: 550px;
     }
 `
 const OOBg = styled.div`
@@ -123,6 +124,10 @@ const OOBg = styled.div`
       position: relative;
       margin-left: 4%;
       margin-right: 4%;
+    }
+
+    @media (max-width: 576px) {
+      margin-left: 0%;
     }
 `
 
@@ -171,18 +176,22 @@ const TextWrapper = styled.div`
     }
 
     @media (max-width: 768px) {
-      min-height: 200px;
+      margin-top: 30px;
+      min-height: 150px;
       display: flex;
       margin-right: auto;
 
       p {
         margin-top: 0;
+        font-size: 36px;
       }
 
       div {
-        margin-top: 140px;
+        display: flex;
+        position: relative;
+        margin-top: 0;
         width: 150px;
-        height: 10px;
+        height: 8px;
       }
     }
 `

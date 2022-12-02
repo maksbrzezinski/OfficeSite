@@ -260,6 +260,7 @@ const HeroForm = styled.div`
     flex-direction: row;
     background-color: #fff;
     min-width: 450px;
+    max-width: 450px;
     height: auto;
     min-height: 638px;
     padding: 34px;

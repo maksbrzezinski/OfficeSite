@@ -131,6 +131,11 @@ const CompanyDetails = styled.div`
 
         h1 {
             margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 14px;
         }
     }
 `
@@ -181,7 +186,8 @@ const LinksContainer = styled.div`
 
         ul {
             width: 50vw;
-            margin-left: 1%;
+            margin-left: 4%;
+            font-size: 14px;
         }
     }
 `

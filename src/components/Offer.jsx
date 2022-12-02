@@ -45,7 +45,8 @@ const Offer = () => {
                     <StaticImage className="photo4" src="../images/Work4.jpeg" />
                     <div class="text-container-4">
                         <div class="yellow-square"></div>
-                        <p>Biuro lorem ipsum<br/> Lorem</p>
+                        <p className="p-desktop">Biuro lorem ipsum<br/> Lorem</p>
+                        <p className="p-mobile">Biuro lorem ipsum Lorem</p>
                         <span></span>
                         <p>od 100 zł/h</p>
                     </div>
@@ -100,6 +101,11 @@ padding-right: 8.4%;
     display: flex;
     font-size: 38px;
     transition: 0.3s;
+
+    @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .arrow-container:hover {
@@ -138,6 +144,10 @@ padding-right: 8.4%;
 
     p, span {
         margin-left: 10px;
+    }
+
+    .p-mobile {
+        display: none;
     }
 
     p:first-of-type {
@@ -218,5 +228,52 @@ padding-right: 8.4%;
         min-width: 100%;
         min-height: 380px;
     } 
+}
+
+@media (max-width: 768px) {
+    margin-top: -40px; 
+
+    #con-1, #con-2, #con-3, #con-4 {
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+
+    .text-container-1, .text-container-2, .text-container-3, .text-container-4 {
+        padding: 15px;
+        height: 130px;
+        width: 200px;
+
+        span {
+            margin-top: -10px;
+        }
+
+        p, span {
+            margin-left: 0;
+        }
+    }
+
+    .p-desktop {
+        display: none;
+    }
+
+    .p-mobile {
+        display: block !important;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        position: relative;
+        margin-top: -35px;
+        line-height: 40px;
+    }
+
+    .text-container-4 {
+        width: 230px;
+        height: 170px;
+    }
+
+    .yellow-square {
+        margin-left: -10px;
+    }
+
 }
 `

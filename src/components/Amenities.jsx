@@ -9,7 +9,7 @@ import {RiTeamFill} from "react-icons/ri"
 const Amenitites = () => {
 return (
 <AmenitiesContainer>
-    <div class="row upper d-flex flex-wrap justify-content-center my-5 my-lg-0">
+    <div class="row upper d-flex flex-wrap my-5 my-lg-0">
         <div className="title-amenities-desktop">
             <p>Lorem<br /> ipsum<br /> dolor sit<br /> amet,<br /> conse</p>
             <span />
@@ -245,28 +245,49 @@ flex-wrap: wrap;
             display: block;
             margin-top: -100px;
             margin-bottom: 70px;
-        }
 
-        .square {
-            display: flex;
-            flex-direction: row;
-            flex-basis: 100%;
-            min-height: 100px;
-            margin-left: -60px;
+            p:first-of-type {
+                font-size: 36px;
+                line-height: 42px;
+            }
 
-            p {
-                margin-left: 40px;
+            span {
+                height: 8px;
+                margin-top: 20px;
             }
         }
 
-        .s1, .s2, .s3, .s4, .s5, .s6, .s7  {
-            top: 10%;
-            left: 15%;
-            transform: translate (-10%, -15%);
+        .upper {
+            width: max-content;
+
+            .square {
+                display: flex;
+                flex-direction: row;
+                flex-basis: 100%;
+                min-height: 100px;
+                margin-left: -60px;
+                align-items: center;
+
+                .icon {
+                    margin-right: 10px;
+                }
+    
+                p {
+                    margin-left: 40px;
+                    font-size: 20px;
+                    width: 60%;
+                }
+                .s1, .s2, .s3, .s4, .s5, .s6, .s7  {
+                    top: 25%;
+                    left: 25%;
+                    transform: translate (-25%, -25%);
+                }
+            }
         }
 
-        .upper .square {
-            flex-basis: 100%;
-    }
+        .btn {
+            margin-right: auto;
+            margin-left: 35px;
+        }
     }
 `
