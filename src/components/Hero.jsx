@@ -367,8 +367,8 @@ const HeroForm = styled.div`
     }
 
     @media (max-width: 576px) {
-        min-width: 98%;
-        max-width: 98%;
+        min-width: 100%;
+        max-width: 100%;
     }
 `
 
