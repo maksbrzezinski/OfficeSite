@@ -262,10 +262,10 @@ const HeroForm = styled.div`
     min-width: 450px;
     max-width: 450px;
     height: auto;
-    min-height: 638px;
+    min-height: 639px;
     padding: 34px;
     padding-right: 32px;
-    margin-left: 28%;
+    margin-left: 10%;
 
     h2, h3 {
         margin-top: -5px;
@@ -351,7 +351,7 @@ const HeroForm = styled.div`
     }
 
     @media (max-width: 1400px) {
-        margin-left: 15%;
+        // margin-left: 15%;
     }
 
     @media (max-width: 1300px) {
@@ -367,7 +367,7 @@ const HeroForm = styled.div`
     }
 
     @media (max-width: 1050px) {
-        margin-left: -40%;
+        margin-left: -43%;
     }
 
     @media (max-width: 991px) {
